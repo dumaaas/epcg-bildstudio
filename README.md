@@ -4,7 +4,7 @@ Staticna veb stranica izradjena upotrebom TailwindCSS framework-a + jQuery + HTM
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## ⚡Kako otvoriti projekat a da Vas ne fisne struja ?
+## ⚡Kako pokrenuti projekat a da Vas ne fisne struja ?
 
 1. Nakon sto ste pristupili ovom repository-u, potrebno je kliknuti zeleno dugme na kojem pise 'Code'. Nakon toga ce se otvoriti meni gdje treba da preuzmete zipovani projekat. 
 2. Kada se zavrsi preuzimanje, potrebno je extract-ovati projekat na lokaciji po Vasem izboru. (Za prikaz projekta nije potrebno da extract-ujete sve direktorijume, pa mozete extract-ovati samo direktorijum 'public').
