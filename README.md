@@ -30,7 +30,7 @@ Staticna veb stranica izradjena upotrebom TailwindCSS framework-a + jQuery + HTM
 
 [Visual Studio Code](https://code.visualstudio.com/download)
 
-### 📌 VSC ekstenzije 
+## 📌 VSC ekstenzije 
 
 * [Headwind](https://github.com/heybourn/headwind) - ekstenzija koja omogucava sortiranje TailwindCSS klasa 
 * [TailwindCSS Intellisense](https://github.com/tailwindlabs/tailwindcss-intellisense) - ekstenzija za prepoznavanje TailwindCSS klasa tokom kucanja
@@ -43,7 +43,7 @@ Staticna veb stranica izradjena upotrebom TailwindCSS framework-a + jQuery + HTM
 * HTML
 * jQuery
 
-### 📚 Biblioteke
+## 📚 Biblioteke
 
 * [Animate.css](https://github.com/animate-css/animate.css) - biblioteka koja nudi niz gotovih animacija
 * [WOW.JS](https://github.com/matthieua/WOW) - biblioteka koja se koristi u kombinaciji sa animate.css bibliotekom i omogucava manipulisanje animacijama
