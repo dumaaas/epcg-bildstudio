@@ -35,7 +35,7 @@ Staticna veb stranica izradjena upotrebom TailwindCSS framework-a + jQuery + HTM
 * [Headwind](https://github.com/heybourn/headwind) - ekstenzija koja omogucava sortiranje TailwindCSS klasa 
 * [TailwindCSS Intellisense](https://github.com/tailwindlabs/tailwindcss-intellisense) - ekstenzija za prepoznavanje TailwindCSS klasa tokom kucanja
 * [Live Server](https://github.com/ritwickdey/vscode-live-server) - ektenzija za pokretanje projekta na live serveru u lokalu
-* [JS-CSS-HTML-formatter](https://github.com/Lonefy/vscode-JS-CSS-HTML-formatter) ekstenzija za formiranje JS, HTML i CSS koda
+* [JS-CSS-HTML-formatter](https://github.com/Lonefy/vscode-JS-CSS-HTML-formatter) - ekstenzija za formiranje JS, HTML i CSS koda
 
 ## 🚀 Tech/framework 
 
