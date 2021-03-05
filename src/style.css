@@ -1,3 +1,5 @@
+/* Mobile languages arrow */
+
 .arrow {
     border: solid white;
     border-width: 0 1px 1px 0;
@@ -7,12 +9,16 @@
     -webkit-transform: rotate(45deg);
 }
 
-.active {
+
+/* Active link in header */
+
+.activeHeader {
+    color: white !important;
     font-size: 19px;
     position: relative;
 }
 
-.active::before {
+.activeHeader::before {
     --tw-bg-opacity: 1;
     background-color: #1ab7ea;
     height: 3px;
@@ -20,9 +26,118 @@
     bottom: -7px;
     left: 0px;
     width: 100%;
-    transition: width .3s;
     content: '';
 }
+
+
+/* Active link in navigation */
+
+.activeNav {
+    position: relative;
+    color: black;
+}
+
+.activeNav::before {
+    --tw-bg-opacity: 1;
+    background-color: #1ab7ea;
+    height: 3px;
+    position: absolute;
+    bottom: -7px;
+    left: 0px;
+    width: 100%;
+    content: '';
+}
+
+
+/* Transition on slider 1 shape */
+
+.slider-shape {
+    transform-origin: 50% 65%;
+    transition: transform 2s, filter 2s ease-in-out;
+    filter: brightness(100%);
+}
+
+.hover-slider:hover .slider-shape {
+    filter: brightness(80%);
+    transform: scale(1.2);
+}
+
+
+/* Changing font-size of active header on different screens */
+
+@media (min-width: 320px) and (max-width: 546px) {
+    .activeHeader {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .activeHeader {
+        font-size: 13px;
+    }
+}
+
+
+/* Rules that applies for slider for extra large screens */
+
+@media(min-width: 1536px) {
+    /* Position for slider 1 dots */
+    .slider1 .owl-dots {
+        position: absolute;
+        bottom: 2%;
+        left: 25%;
+    }
+    /* Slider dots color and border */
+    .owl-carousel .owl-dots .owl-dot span {
+        background: white !important;
+        border: solid 2px #e4e4e5;
+    }
+    /* Slider 2 next button position and color */
+    .slider2 .owl-nav .owl-next {
+        background-color: white !important;
+        right: 64% !important;
+        border: solid 2px #e4e4e5 !important;
+    }
+    /* Slider 2 opacity for active items */
+    .slider2 .owl-item.active {
+        opacity: 0.4
+    }
+    /* Slider 3 dots position */
+    .slider3 .owl-dots {
+        position: absolute;
+        top: -11%;
+        right: 19%;
+    }
+    /* Slider 3 next button position and color */
+    .slider3 .owl-nav .owl-next {
+        background-color: #1ab7ea !important;
+        right: 0% !important;
+        top: -18% !important;
+    }
+    /* Slider 3 prev button position and color */
+    .slider3 .owl-nav .owl-prev {
+        display: block;
+        background-color: white !important;
+        border-radius: 9999px !important;
+        height: 87px !important;
+        width: 87px !important;
+        margin: 0px !important;
+        top: -18% !important;
+        right: 9% !important;
+        position: absolute !important;
+        border: solid 2px #e4e4e5 !important;
+    }
+}
+
+
+/* Slider dot on hover */
+
+.owl-carousel .owl-dots .owl-dot span:hover {
+    background: #1ab7ea !important;
+}
+
+
+/* Slider dot active style */
 
 .owl-carousel .owl-dots .owl-dot.active span {
     width: 24px;
@@ -31,33 +146,144 @@
     background: #1ab7ea !important;
     display: block;
     -webkit-backface-visibility: visible;
-    -webkit-transition: opacity 200ms ease;
-    -moz-transition: opacity 200ms ease;
-    -ms-transition: opacity 200ms ease;
-    -o-transition: opacity 200ms ease;
-    transition: opacity 200ms ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+    transition: 0.7s ease;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
 }
 
+
+/* Slider dot size and transition */
+
 .owl-carousel .owl-dots .owl-dot span {
     width: 18px;
     height: 18px;
+    transition: 1s ease;
 }
+
+
+/* Slider img behaviour */
 
 .owl-carousel .owl-item img {
     display: block;
     width: auto;
 }
 
+
+/* Slider active button */
+
 .owl-dots .owl-dot.active button {
     text-decoration: none;
 }
 
+
+/* Slider active button on focus */
+
 .owl-nav button:focus {
     outline: 2px solid transparent;
     outline-offset: 2px;
+}
+
+
+/* +/- manipulation FAQ section */
+
+.closed .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+.closed .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+}
+
+.circle-plus:hover .horizontal {
+    background-color: #2bb7e5 !important;
+}
+
+.circle-plus:hover .vertical {
+    background-color: #2bb7e5 !important;
+}
+
+.opened {
+    opacity: 1;
+}
+
+.opened .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    background-color: #2bb7e5 !important;
+}
+
+.opened .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+.circle-plus {
+    height: 4em;
+    width: 4em;
+    font-size: 1em;
+    opacity: 0.7;
+}
+
+.circle-plus .circle {
+    position: relative;
+    width: 2.55em;
+    height: 2.5em;
+    border-radius: 100%;
+    border: solid 0.5em transparent;
+}
+
+.circle-plus .circle .horizontal {
+    position: absolute;
+    background-color: #ccc;
+    width: 22px;
+    height: 2px;
+    left: 50%;
+    margin-left: -13px;
+    top: 50%;
+    margin-top: 11px
+}
+
+.circle-plus .circle .vertical {
+    position: absolute;
+    background-color: #ccc;
+    width: 2px;
+    height: 22px;
+    left: 50%;
+    margin-left: -2.5px;
+    top: 50%;
+}
+
+@media screen and (max-width: 800px) {
+    .slider3-animation .wow {
+        animation-name: none !important;
+        visibility: visible !important;
+    }
+}
+
+@media(min-width: 320px) and (max-width: 1535px) {
+    .slider2 .owl-nav .owl-next {
+        right: -6% !important;
+    }
+    .slider3 .owl-nav .owl-next {
+        background-color: white !important;
+        right: -5% !important;
+        top: 42% !important;
+    }
+    .owl-nav .owl-prev {
+        display: none;
+    }
+    .owl-nav .owl-prev img {
+        display: none;
+    }
 }
 
 .owl-nav .owl-next {
@@ -67,37 +293,29 @@
     width: 87px !important;
     margin: 0px !important;
     position: absolute !important;
-    right: -6% !important;
     top: 42% !important;
 }
 
 .owl-nav .owl-next:hover {
+    transition: all 0.5s ease-in-out;
     background-color: #0E477F !important;
 }
 
-.owl-nav .owl-prev {
-    display: none;
+.owl-nav .owl-prev:hover {
+    transition: all 0.5s ease-in-out;
+    background-color: #0E477F !important;
 }
 
 .slider3 .owl-nav .owl-next {
-    background-color: white !important;
     border-radius: 9999px !important;
     height: 87px !important;
     width: 87px !important;
     margin: 0px !important;
     position: absolute !important;
-    right: -5% !important;
-    top: 42% !important;
-    --tw-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.75) !important;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
 
 .slider3 .owl-nav .owl-next:hover {
     background-color: #0E477F !important;
-}
-
-.slider3 .owl-nav .owl-prev {
-    display: none;
 }
 
 @tailwind base;
@@ -149,6 +367,7 @@
         /* Legacy iOS */
         font-display: fallback;
     }
+    /* Base Styles */
     body {
         @apply text-black font-roboto;
     }
@@ -163,5 +382,8 @@
     }
     p {
         @apply inline-block text-16px;
+    }
+    button:focus {
+        @apply outline-none;
     }
 }
