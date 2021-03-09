@@ -78,9 +78,9 @@
 }
 
 
-/* Rules that applies for slider for extra large screens */
+/* Rules that applies for slider for  large screens */
 
-@media(min-width: 1536px) {
+@media(min-width: 1280px) {
     /* Position for slider 1 dots */
     .slider1 .owl-dots {
         position: absolute;
@@ -95,7 +95,7 @@
     /* Slider 2 next button position and color */
     .slider2 .owl-nav .owl-next {
         background-color: white !important;
-        right: 64% !important;
+        right: 60% !important;
         border: solid 2px #e4e4e5 !important;
     }
     /* Slider 2 opacity for active items */
@@ -125,6 +125,15 @@
         top: -18% !important;
         right: 9% !important;
         position: absolute !important;
+        border: solid 2px #e4e4e5 !important;
+    }
+}
+
+@media(min-width: 1536px) {
+    /* Slider 2 next button position and color */
+    .slider2 .owl-nav .owl-next {
+        background-color: white !important;
+        right: 64% !important;
         border: solid 2px #e4e4e5 !important;
     }
 }
@@ -269,7 +278,7 @@
     }
 }
 
-@media(min-width: 320px) and (max-width: 1535px) {
+@media(min-width: 320px) and (max-width: 1279px) {
     .slider2 .owl-nav .owl-next {
         right: -6% !important;
     }
@@ -385,5 +394,33 @@
     }
     button:focus {
         @apply outline-none;
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+        /* Hamburger menu */
+        .hamburger-btn {
+            @apply inline-block cursor-pointer;
+        }
+        .bar1 {
+            @apply mx-0 transition duration-75 bg-hamburgerMenu w-22px h-2px my-7px;
+        }
+        .bar2 {
+            @apply mx-0 transition duration-75 bg-hamburgerMenu w-30px h-2px my-7px;
+        }
+        .bar3 {
+            @apply mx-0 transition duration-75 bg-hamburgerMenu w-30px h-2px my-7px;
+        }
+        .change .bar1 {
+            @apply transform -rotate-45 -translate-x-8px w-30px translate-y-13px;
+        }
+        .change .bar2 {
+            @apply opacity-0;
+        }
+        .change .bar3 {
+            @apply transform rotate-45 -translate-x-7px -translate-y-6px;
+        }
+        /* End Hamburger menu */
     }
 }

@@ -29,8 +29,10 @@ $(document).ready(function() {
             if ($("#input-search").hasClass("hidden")) {
                 setTimeout(function() {
                     $("#input-search").removeClass("hidden");
-                }, 500);
+                    $("#input-search").addClass("animate__animated");
+                }, 400);
             } else {
+                $("#input-search").addClass("animate__slideInDown");
                 $("#input-search").addClass("hidden");
             }
             $(".nav-link").slideToggle();
@@ -87,6 +89,24 @@ $(document).ready(function() {
         });
     });
 
+    //open and close hamburger menu
+    $(function() {
+        var hamburger = $('#hamburger');
+        var menu = $('#menu');
+        hamburger.on('click', function() {
+            console.log(menu);
+            if (menu.hasClass('hidden')) {
+                menu.removeClass('hidden');
+                hamburger.addClass('change');
+                $('body').attr('style', 'overflow:hidden;');
+            } else {
+                hamburger.removeClass('change');
+                menu.addClass('hidden');
+                $('body').removeAttr('style');
+            }
+        });
+    });
+
     //slider1
     $('.slider1').owlCarousel({
         loop: true,
@@ -128,7 +148,7 @@ $(document).ready(function() {
         items: 1,
         smartSpeed: 1200,
         navText: ["", "<img src='img/slider2-nav.png' class='mx-auto' loading='lazy' alt='ecpg'>"],
-        margin: 10,
+        margin: 24,
         touchDrag: false,
         mouseDrag: false,
         dots: true,
@@ -142,10 +162,17 @@ $(document).ready(function() {
             //     dots: true,
             //     dotsData: true,
             // },
-            // 1280: {
-            //     stagePadding: 300,
-            //     margin: 200,
-            // },
+            1280: {
+                navText: ["", "<img src='img/slider3-nav.png' class='mx-auto' loading='lazy' alt='ecpg'>"],
+                margin: 24,
+                dots: false,
+                // center: true,
+                mouseDrag: true,
+                autoWidth: true,
+                stagePadding: 200
+
+
+            },
             1536: {
                 navText: ["", "<img src='img/slider3-nav.png' class='mx-auto' loading='lazy' alt='ecpg'>"],
                 margin: 24,
@@ -179,10 +206,12 @@ $(document).ready(function() {
             //     dots: true,
             //     dotsData: true,
             // },
-            // 1280: {
-            //     stagePadding: 300,
-            //     margin: 200,
-            // },
+            1280: {
+                items: 2,
+                margin: 24,
+                navText: ["<img src='img/slider3-nav-prev.png' class='mx-auto' loading='lazy' alt='ecpg'>", "<img src='img/slider2-nav.png' class='mx-auto' loading='lazy' alt='ecpg'>"],
+
+            },
             1536: {
                 items: 2,
                 margin: 24,

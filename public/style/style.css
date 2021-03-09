@@ -73,9 +73,9 @@
   }
 }
 
-/* Rules that applies for slider for extra large screens */
+/* Rules that applies for slider for  large screens */
 
-@media(min-width: 1536px) {
+@media(min-width: 1280px) {
   /* Position for slider 1 dots */
 
   .slider1 .owl-dots {
@@ -95,7 +95,7 @@
 
   .slider2 .owl-nav .owl-next {
     background-color: white !important;
-    right: 64% !important;
+    right: 60% !important;
     border: solid 2px #e4e4e5 !important;
   }
 
@@ -133,6 +133,16 @@
     top: -18% !important;
     right: 9% !important;
     position: absolute !important;
+    border: solid 2px #e4e4e5 !important;
+  }
+}
+
+@media(min-width: 1536px) {
+  /* Slider 2 next button position and color */
+
+  .slider2 .owl-nav .owl-next {
+    background-color: white !important;
+    right: 64% !important;
     border: solid 2px #e4e4e5 !important;
   }
 }
@@ -265,7 +275,7 @@
   }
 }
 
-@media(min-width: 320px) and (max-width: 1535px) {
+@media(min-width: 320px) and (max-width: 1279px) {
   .slider2 .owl-nav .owl-next {
     right: -6% !important;
   }
@@ -1097,6 +1107,10 @@ button:focus {
   height: 1442px;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .text-8px {
   font-size: 8px;
 }
@@ -1121,6 +1135,10 @@ button:focus {
   font-size: 19px;
 }
 
+.text-20px {
+  font-size: 20px;
+}
+
 .text-22px {
   font-size: 22px;
 }
@@ -1135,6 +1153,10 @@ button:focus {
 
 .leading-10px {
   line-height: 10px;
+}
+
+.leading-12px {
+  line-height: 12px;
 }
 
 .leading-20px {
@@ -1183,6 +1205,10 @@ button:focus {
 
 .mt-14px {
   margin-top: 14px;
+}
+
+.mt-20px {
+  margin-top: 20px;
 }
 
 .mt-21px {
@@ -1285,6 +1311,11 @@ button:focus {
   padding-bottom: 15px;
 }
 
+.py-20px {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .px-20px {
   padding-left: 20px;
   padding-right: 20px;
@@ -1310,12 +1341,25 @@ button:focus {
   padding-right: 42px;
 }
 
+.px-46px {
+  padding-left: 46px;
+  padding-right: 46px;
+}
+
+.pt-5px {
+  padding-top: 5px;
+}
+
 .pt-20px {
   padding-top: 20px;
 }
 
 .pb-30px {
   padding-bottom: 30px;
+}
+
+.pt-33px {
+  padding-top: 33px;
 }
 
 .pb-50px {
@@ -1506,6 +1550,10 @@ button:focus {
   letter-spacing: 0.2px;
 }
 
+.tracking-2px {
+  letter-spacing: 2px;
+}
+
 .visible {
   visibility: visible;
 }
@@ -1530,12 +1578,24 @@ button:focus {
   width: 206px;
 }
 
+.w-290px {
+  width: 290px;
+}
+
+.w-400px {
+  width: 400px;
+}
+
 .w-700px {
   width: 700px;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .z-10 {
@@ -1600,6 +1660,93 @@ button:focus {
 .duration-500 {
   transition-duration: 500ms;
 }
+
+/* Hamburger menu */
+
+.hamburger-btn {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bar1 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(125, 152, 162, var(--tw-bg-opacity));
+  height: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: 22px;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 75ms;
+}
+
+.bar2 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(125, 152, 162, var(--tw-bg-opacity));
+  height: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: 30px;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 75ms;
+}
+
+.bar3 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(125, 152, 162, var(--tw-bg-opacity));
+  height: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  width: 30px;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 75ms;
+}
+
+.change .bar1 {
+  width: 30px;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-rotate: -45deg;
+  --tw-translate-x: -8px;
+  --tw-translate-y: 13px;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-rotate: 45deg;
+  --tw-translate-x: -7px;
+  --tw-translate-y: -6px;
+}
+
+/* End Hamburger menu */
 
 @media (min-width: 547px) and (max-width: 767px) {
   .sm\:flex {
@@ -1860,6 +2007,10 @@ button:focus {
   .sm\:w-369px {
     width: 369px;
   }
+
+  /* Hamburger menu */
+
+  /* End Hamburger menu */
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -2131,6 +2282,10 @@ button:focus {
   .md\:w-457px {
     width: 457px;
   }
+
+  /* Hamburger menu */
+
+  /* End Hamburger menu */
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -2402,9 +2557,385 @@ button:focus {
   .lg\:w-457px {
     width: 457px;
   }
+
+  /* Hamburger menu */
+
+  /* End Hamburger menu */
 }
 
 @media (min-width: 1280px) and (max-width: 1535px) {
+  .xl\:bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+
+  .xl\:bg-sectionThreeCoverDesktop {
+    background-image: url('../img/section3-cover-desktop.png');
+  }
+
+  .xl\:bg-sectionFourCoverDesktop {
+    background-image: url('../img/section4-cover-desktop.png');
+  }
+
+  .xl\:from-secondary-background-0 {
+    --tw-gradient-from: white 26%;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:to-secondary-background-1 {
+    --tw-gradient-to: #E8F9FF 26%;
+  }
+
+  .xl\:bg-auto {
+    background-size: auto;
+  }
+
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:inline-block {
+    display: inline-block;
+  }
+
+  .xl\:flex {
+    display: flex;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
+  }
+
+  .xl\:order-3 {
+    order: 3;
+  }
+
+  .xl\:h-31px {
+    height: 31px;
+  }
+
+  .xl\:h-431px {
+    height: 431px;
+  }
+
+  .xl\:h-670px {
+    height: 670px;
+  }
+
+  .xl\:text-13px {
+    font-size: 13px;
+  }
+
+  .xl\:text-14px {
+    font-size: 14px;
+  }
+
+  .xl\:text-15px {
+    font-size: 15px;
+  }
+
+  .xl\:text-16px {
+    font-size: 16px;
+  }
+
+  .xl\:text-18px {
+    font-size: 18px;
+  }
+
+  .xl\:text-19px {
+    font-size: 19px;
+  }
+
+  .xl\:text-20px {
+    font-size: 20px;
+  }
+
+  .xl\:text-22px {
+    font-size: 22px;
+  }
+
+  .xl\:text-25px {
+    font-size: 25px;
+  }
+
+  .xl\:text-35px {
+    font-size: 35px;
+  }
+
+  .xl\:text-45px {
+    font-size: 45px;
+  }
+
+  .xl\:text-60px {
+    font-size: 60px;
+  }
+
+  .xl\:leading-17px {
+    line-height: 17px;
+  }
+
+  .xl\:leading-26px {
+    line-height: 26px;
+  }
+
+  .xl\:leading-73px {
+    line-height: 73px;
+  }
+
+  .xl\:mx-30px {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .xl\:my-130px {
+    margin-top: 130px;
+    margin-bottom: 130px;
+  }
+
+  .xl\:mt-5px {
+    margin-top: 5px;
+  }
+
+  .xl\:mt-20px {
+    margin-top: 20px;
+  }
+
+  .xl\:mt-23px {
+    margin-top: 23px;
+  }
+
+  .xl\:mt-30px {
+    margin-top: 30px;
+  }
+
+  .xl\:ml-30px {
+    margin-left: 30px;
+  }
+
+  .xl\:mt-35px {
+    margin-top: 35px;
+  }
+
+  .xl\:mt-50px {
+    margin-top: 50px;
+  }
+
+  .xl\:ml-50px {
+    margin-left: 50px;
+  }
+
+  .xl\:mr-60px {
+    margin-right: 60px;
+  }
+
+  .xl\:mt-80px {
+    margin-top: 80px;
+  }
+
+  .xl\:mb-80px {
+    margin-bottom: 80px;
+  }
+
+  .xl\:mt-100px {
+    margin-top: 100px;
+  }
+
+  .xl\:ml-100px {
+    margin-left: 100px;
+  }
+
+  .xl\:mb-111px {
+    margin-bottom: 111px;
+  }
+
+  .xl\:mt-120px {
+    margin-top: 120px;
+  }
+
+  .xl\:mt-150px {
+    margin-top: 150px;
+  }
+
+  .xl\:mt-252px {
+    margin-top: 252px;
+  }
+
+  .xl\:mt-290px {
+    margin-top: 290px;
+  }
+
+  .xl\:-ml-21px {
+    margin-left: -21px;
+  }
+
+  .xl\:-mt-34px {
+    margin-top: -34px;
+  }
+
+  .xl\:max-w-179px {
+    max-width: 179px;
+  }
+
+  .xl\:max-w-250px {
+    max-width: 250px;
+  }
+
+  .xl\:max-w-452px {
+    max-width: 452px;
+  }
+
+  .xl\:max-w-710px {
+    max-width: 710px;
+  }
+
+  .xl\:max-w-963px {
+    max-width: 963px;
+  }
+
+  .xl\:max-w-1417px {
+    max-width: 1147px;
+  }
+
+  .xl\:min-w-475px {
+    min-width: 475px;
+  }
+
+  .xl\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .xl\:p-61px {
+    padding: 61px;
+  }
+
+  .xl\:px-30px {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .xl\:py-50px {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .xl\:pl-46px {
+    padding-left: 46px;
+  }
+
+  .xl\:pt-49px {
+    padding-top: 49px;
+  }
+
+  .xl\:pt-100px {
+    padding-top: 100px;
+  }
+
+  .xl\:pb-100px {
+    padding-bottom: 100px;
+  }
+
+  .xl\:pb-120px {
+    padding-bottom: 120px;
+  }
+
+  .xl\:right-0 {
+    right: 0px;
+  }
+
+  .xl\:bottom-0 {
+    bottom: 0px;
+  }
+
+  .xl\:right-125px {
+    right: 125px;
+  }
+
+  .xl\:right-162px {
+    right: 162px;
+  }
+
+  .xl\:top-180px {
+    top: 180px;
+  }
+
+  .xl\:right-190px {
+    right: 190px;
+  }
+
+  .xl\:right-204px {
+    right: 204px;
+  }
+
+  .xl\:top-229px {
+    top: 229px;
+  }
+
+  .xl\:top-269px {
+    top: 269px;
+  }
+
+  .xl\:text-left {
+    text-align: left;
+  }
+
+  .xl\:w-20px {
+    width: 20px;
+  }
+
+  .xl\:w-153px {
+    width: 153px;
+  }
+
+  .xl\:w-230px {
+    width: 230px;
+  }
+
+  .xl\:w-252px {
+    width: 252px;
+  }
+
+  .xl\:w-300px {
+    width: 300px;
+  }
+
+  .xl\:w-350px {
+    width: 350px;
+  }
+
+  .xl\:w-390px {
+    width: 390px;
+  }
+
+  .xl\:w-400px {
+    width: 400px;
+  }
+
+  .xl\:w-550px {
+    width: 550px;
+  }
+
+  .xl\:w-594px {
+    width: 594px;
+  }
+
+  .xl\:w-820px {
+    width: 820px;
+  }
+
+  .xl\:w-1157px {
+    width: 1157px;
+  }
+
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* Hamburger menu */
+
+  /* End Hamburger menu */
 }
 
 @media (min-width: 1536px) {
@@ -2684,29 +3215,9 @@ button:focus {
     padding: 61px;
   }
 
-  .\32xl\:py-15px {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
-  .\32xl\:py-20px {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
   .\32xl\:px-30px {
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-  .\32xl\:px-34px {
-    padding-left: 34px;
-    padding-right: 34px;
-  }
-
-  .\32xl\:px-46px {
-    padding-left: 46px;
-    padding-right: 46px;
   }
 
   .\32xl\:py-64px {
@@ -2802,10 +3313,6 @@ button:focus {
     width: 240px;
   }
 
-  .\32xl\:w-290px {
-    width: 290px;
-  }
-
   .\32xl\:w-321px {
     width: 321px;
   }
@@ -2841,6 +3348,10 @@ button:focus {
   .\32xl\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+
+  /* Hamburger menu */
+
+  /* End Hamburger menu */
 }
 
 @media (min-width: 320px) and (max-width: 546px) {
@@ -3122,4 +3633,8 @@ button:focus {
   .\32sm\:w-252px {
     width: 252px;
   }
+
+  /* Hamburger menu */
+
+  /* End Hamburger menu */
 }
