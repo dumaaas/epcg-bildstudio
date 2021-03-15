@@ -1,22 +1,25 @@
 //initializing new Wow object on load of window
-$(window).on('load', function() {
+$(window).on('load', function () {
     new WOW().init();
 });
 
 //document ready
-$(document).ready(function() {
+$(document).ready(function () {
+
 
     //to avoid exepction on Lighthouse report for passive listeners
     jQuery.event.special.touchstart = {
-        setup: function(_, ns, handle) {
-            this.addEventListener("touchstart", handle, { passive: true });
+        setup: function (_, ns, handle) {
+            this.addEventListener("touchstart", handle, {
+                passive: true
+            });
         }
     };
 
     //functions on click
-    $(function() {
+    $(function () {
         //adding/removing active class from header links
-        $("header a").click(function() {
+        $("header a").click(function () {
             // remove classes from all
             $("header a").removeClass("activeHeader");
             // add class to the one we clicked
@@ -24,10 +27,10 @@ $(document).ready(function() {
         });
 
         //hiding navigation and showing search input and reverse
-        $("#search").click(function() {
+        $("#search").click(function () {
             // remove classes from all
             if ($("#input-search").hasClass("hidden")) {
-                setTimeout(function() {
+                setTimeout(function () {
                     $("#input-search").removeClass("hidden");
                     $("#input-search").addClass("animate__animated");
                 }, 400);
@@ -39,7 +42,7 @@ $(document).ready(function() {
         });
 
         //adding/removing active class from navigation links
-        $(".navigation a").click(function() {
+        $(".navigation a").click(function () {
             // remove classes from all
             $(".navigation a").removeClass("activeNav");
             // add class to the one we clicked
@@ -51,12 +54,12 @@ $(document).ready(function() {
     $(".answers").hide();
 
     //this code was needed so we can show svg icons
-    $('img[src$=".svg"]').each(function() {
+    $('img[src$=".svg"]').each(function () {
         var $img = jQuery(this);
         var imgURL = $img.attr('src');
         var attributes = $img.prop("attributes");
 
-        $.get(imgURL, function(data) {
+        $.get(imgURL, function (data) {
             // Get the SVG tag, ignore the rest
             var $svg = jQuery(data).find('svg');
 
@@ -64,7 +67,7 @@ $(document).ready(function() {
             $svg = $svg.removeAttr('xmlns:a');
 
             // Loop through IMG attributes and apply on SVG
-            $.each(attributes, function() {
+            $.each(attributes, function () {
                 $svg.attr(this.name, this.value);
             });
 
@@ -74,26 +77,37 @@ $(document).ready(function() {
     });
 
     //show answer when we click + and replace + with -
-    $(".circle-plus").click(function() {
+    $(".circle-plus").click(function () {
         var num = this.id.match(/\d+/)[0];
         $("#faq_" + num).toggleClass('opened');
         $("#answer_" + num).slideToggle();
+        $(".question_"+ num).toggleClass('toggleUnderline');
+    });
+
+    $('.circle-plus').mouseover(function() {
+        var num = this.id.match(/\d+/)[0];
+        $('.question_'+ num).addClass('underlineHover');
+    }); 
+
+    $('.circle-plus').mouseout(function() {
+        var num = this.id.match(/\d+/)[0];
+        $('.question_'+ num).removeClass('underlineHover');
     });
 
     //Go through each carousel on the page
-    $('.owl-carousel').each(function() {
+    $('.owl-carousel').each(function () {
         //Find each set of dots in this carousel
-        $(this).find('.owl-dot').each(function(index) {
+        $(this).find('.owl-dot').each(function (index) {
             //Add one to index so it starts from 1
             $(this).attr('aria-label', index + 1);
         });
     });
 
     //open and close hamburger menu
-    $(function() {
+    $(function () {
         var hamburger = $('#hamburger');
         var menu = $('#menu');
-        hamburger.on('click', function() {
+        hamburger.on('click', function () {
             console.log(menu);
             if (menu.hasClass('hidden')) {
                 menu.removeClass('hidden');
@@ -110,6 +124,7 @@ $(document).ready(function() {
     //slider1
     $('.slider1').owlCarousel({
         loop: true,
+        lazyLoad: true,
         items: 1,
         smartSpeed: 1200,
         autoplayHoverPause: true,
@@ -119,7 +134,7 @@ $(document).ready(function() {
         mouseDrag: false,
         responsive: {
             // 0: {
-
+            //     autoHeight: true,
             // },
             // 1024: {
             //     stagePadding: 300,
@@ -141,9 +156,21 @@ $(document).ready(function() {
         }
     });
 
+    // var owl = $('.slider1');
+    // var effectsIn =
+    //     'animationEnd oAnimationEnd mozAnimationEnd webkitAnimationEnd';
+    // owl.on('changed.owl.carousel', function (event) {
+    //     $('.slider-title')
+    //         .addClass('fadeIn')
+    //         .one(effectsIn, function () {
+    //             $('.slider-title').removeClass('fadeIn');
+    //         });
+    // });
+
     //slider2
     $('.slider2').owlCarousel({
         nav: true,
+        lazyLoad: true,
         loop: true,
         items: 1,
         smartSpeed: 1200,
@@ -163,7 +190,7 @@ $(document).ready(function() {
             //     dotsData: true,
             // },
             1280: {
-                navText: ["", "<img src='img/slider3-nav.png' class='mx-auto' loading='lazy' alt='ecpg'>"],
+                navText: ["", "<img src='img/slider3-nav.png' class='mx-auto slider-nav' loading='lazy' alt='ecpg'>"],
                 margin: 24,
                 dots: false,
                 // center: true,
@@ -174,7 +201,7 @@ $(document).ready(function() {
 
             },
             1536: {
-                navText: ["", "<img src='img/slider3-nav.png' class='mx-auto' loading='lazy' alt='ecpg'>"],
+                navText: ["", "<img src='img/slider3-nav.png' class='mx-auto slider-nav' loading='lazy' alt='ecpg'>"],
                 margin: 24,
                 autoWidth: true,
                 dots: false,
@@ -187,6 +214,7 @@ $(document).ready(function() {
     $('.slider3').owlCarousel({
         nav: true,
         loop: true,
+        lazyLoad: true,
         items: 1,
         smartSpeed: 1200,
         navText: ["", "<img src='img/slider3-nav.png' class='mx-auto' loading='lazy' alt='ecpg'>"],
@@ -220,5 +248,7 @@ $(document).ready(function() {
             }
         }
     });
+
+
 
 });

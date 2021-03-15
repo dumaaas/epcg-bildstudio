@@ -36,6 +36,8 @@
   <link rel="preload" href="style/owl.carousel.min.css" as="style" />
   <link rel="preload" href="style/owl.theme.default.min.css" as="style" />
   <link rel="preload" href="style/animate.min.css" as="style" />
+
+
   <!-- End preloading styles -->
 
   <!-- Preloading scripts -->
@@ -72,36 +74,40 @@
 
 <body class="overflow-x-hidden">
   <!-- Header -->
-  <header id="" class="relative z-10 w-full h-84px 2xl:h-31px xl:h-31px bg-headerBlue">
+  <header id="" class="relative z-10 w-full h-84px 2xl:h-31px xl:h-31px bg-headerBlue wow slideInLeft">
     <div
-      class="absolute inset-x-0 flex justify-between mx-auto text-headerLink tracking-0.2px px-10px 2xl:px-30px xl:px-30px bottom-4px 2xl:text-13px xl:text-13px 2sm:text-14px text-19px max-w-1700px md:max-w-708px lg:max-w-708px sm:max-w-541px 2sm:min-w-300px">
+      class="absolute inset-x-0 flex justify-between mx-auto tracking-0.2px px-10px 2xl:px-30px xl:px-50px bottom-4px 2xl:text-13px xl:text-13px 2sm:text-14px text-19px max-w-1700px md:max-w-708px lg:max-w-708px sm:max-w-541px 2sm:min-w-300px">
       <div class="">
-        <a href="#" class="activeHeader">Domaćinstva</a>
-        <a href="#" class="ml-45px 2sm:ml-36px">Ostala potrošnja</a>
+        <a href="#" class="headerLink activeHeader wow fadeInDown" data-content="Domaćinstva" data-wow-delay="0.6s">Domaćinstva</a>
+        <a href="#" class="headerLink ml-45px 2sm:ml-36px wow fadeInDown" data-content="Ostala potrošnja" data-wow-delay="0.65s">Ostala potrošnja</a>
       </div>
       <div>
-        <a class="cursor-pointer 2xl:hidden xl:hidden" href="#">Mne <i class="ml-4px mb-3px arrow"></i></a>
-        <a class="cursor-pointer lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px" href="#">O nama</a>
-        <a class="cursor-pointer lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px" href="#">Media centar</a>
-        <a class="cursor-pointer lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px" href="#">Kontakt</a>
-        <a class="cursor-pointer lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px" href="#">Crnogorski</a>
+        <a class="cursor-pointer headerLink 2xl:hidden xl:hidden" data-content="Mne" href="#">Mne <i class="ml-4px mb-3px arrow"></i></a>
+        <a class="cursor-pointer headerLink lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px wow fadeInDown"
+          data-wow-delay="0.7s" href="#">O nama</a>
+        <a class="cursor-pointer headerLink lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px wow fadeInDown"
+          data-wow-delay="0.75s" href="#">Media centar</a>
+        <a class="cursor-pointer headerLink lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px wow fadeInDown"
+          data-wow-delay="0.8s" href="#">Kontakt</a>
+        <a class="cursor-pointer headerLink lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px 2sm:ml-36px wow fadeInDown"
+          data-wow-delay="0.85s" href="#">Crnogorski</a>
       </div>
     </div>
   </header>
   <!-- End Header -->
 
-  <main>
+  <main id="context">
     <!-- Navigation -->
     <section
-      class="bg-coverColor 2xl:bg-gradient-to-r 2xl:from-secondary-background-0 2xl:to-secondary-background-1 xl:bg-gradient-to-r xl:from-secondary-background-0 xl:to-secondary-background-1">
+      class="bg-coverColor 2xl:bg-gradient-to-r 2xl:from-secondary-background-0 2xl:to-secondary-background-1 xl:bg-gradient-to-r xl:from-secondary-background-0 xl:to-secondary-background-1 wow slideInRight"
+      data-wow-delay="0.9s">
       <div
-        class="flex justify-between mx-auto max-w-1700px lg:max-w-708px md:max-w-708px sm:max-w-541px 2sm:min-w-300px px-10px 2xl:px-30px xl:px-30px pt-20px">
+        class="flex justify-between mx-auto max-w-1700px lg:max-w-708px md:max-w-708px sm:max-w-541px 2sm:min-w-300px px-10px 2xl:px-30px xl:px-50px pt-20px">
         <div>
           <!-- Logo -->
-          <img src="img/epcg-logo.png" loading="lazy" alt="epcg" class="wow fadeInDown" data-wow-delay="0.1s" />
+          <img src="img/epcg-logo.png" loading="lazy" alt="epcg" />
         </div>
-        <div class="navigation font-robotoBold mt-14px text-17px xl:text-15px text-navLink wow fadeInDown"
-          data-wow-delay="0.1s">
+        <div class="navigation font-robotoBold mt-14px text-17px xl:text-15px text-navLink">
           <!-- Nav Links -->
           <a class="cursor-pointer nav-link lg:hidden md:hidden sm:hidden 2sm:hidden activeNav" href="#">Račun</a>
           <a class="cursor-pointer nav-link lg:hidden md:hidden sm:hidden 2sm:hidden ml-45px xl:ml-30px"
@@ -119,24 +125,24 @@
           <input type="text" placeholder="Pretraga..." id="input-search"
             class="animate__animated animate__slideInDown animate__faster placeholder-opacity-10 h-40px rounded-2xl hidden w-700px focus:outline-none ring-2 border-headerBlue focus:ring focus:border-headerBlue ..." />
           <svg id="search"
-            class="inline-block cursor-pointer fill-current hover:text-headerBlue 2xl:w-20px 2xl:mx-30px xl:w-20px xl:mx-30px mr-30px"
+            class="inline-block text-purple-600 cursor-pointer stroke-current hover:text-headerBlue 2xl:w-20px 2xl:mx-30px xl:w-20px xl:mx-30px mr-30px 2sm:mr-15px"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px">
             <image
-              class="inline-block cursor-pointer fill-current hover:text-headerBlue 2xl:w-20px 2xl:mx-30px xl:w-20px xl:mx-30px mr-30px"
+              class="inline-block text-purple-600 cursor-pointer stroke-current hover:text-headerBlue 2xl:w-20px 2xl:mx-30px xl:w-20px xl:mx-30px mr-30px"
               x="0px" y="0px" width="30px" height="30px"
               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA3lBMVEV9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKL///+NJ7AxAAAASHRSTlMALYPC7fXOlEUCN7/v0tDm2loBBYz+bCASWLi2FAq36lnR3CKxGgeieg/48iOfdOwJV5JRxhARr4ZeRqnrGIKX6ENP7tu+vOBusCQQAAAAAWJLR0RJhwXkfAAAAAd0SU1FB+UDCg0KGTQcaTwAAAEsSURBVCjPfdLnloIwEAXgIAo27FjWBXtD7GJfdW173/+JVmMQkBznzx34SDI5B0JcJQTEIBCS5HCE+CoaAxBXEsl7pNIZL2ZzKpR84dEWS19A+dutmo5K1VkRraHecDTShNRyf97uoO6s70LpeQ/LdFC2d2sYffN90nYNadYOMOTcBKnn/XrGaOxnoiNMcwKZo6TEXk8x43EREtvF5DFJhmjMYXE5ARoiFlxWnryEwOV4kMYKa54WINLcYMvjPAI0szvjx68ZxT5zj4Ofq4ixzjqqv+/aqqhRuz/h/DZ8T0Lu9aBdcPasNxXo2ZdecYF6eM03HvbR1Fx61U5HGNu1sLDMmTyC0Y149D7ffgdWxsD5D5k+7r9ZLcW5Pp24/jtHefVZye2jkr/bJ/0HsussRMbTVFcAAAAASUVORK5CYII=" />
           </svg>
 
           <!-- User Profile Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33px" height="33px"
-            class="inline-block cursor-pointer 2xl:hidden xl:hidden mr-30px">
+            class="inline-block cursor-pointer 2xl:hidden xl:hidden mr-30px 2sm:mr-15px">
             <image x="0px" y="0px" width="33px" height="33px"
               class="inline-block cursor-pointer 2xl:hidden xl:hidden mr-30px"
               xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAMAAABgOjJdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABWVBMVEV9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKJ9mKL///++gJfWAAAAcXRSTlMAAkinydjj5QyS2/rz2si5b+D8mSsKu/jfdAQT0r4QDiD0l9Xo8D3717ahLwHT60ZZnRrHy9C/4QeA/WcP3Pdg6atPMGHZxiTM+eS69VCqEnuUqagoUU5HljIlA83vTHFk0XCzsbykvW0nlZDyt0riS93A4bEAAAABYktHRHI2Dg1YAAAAB3RJTUUH5QMKDQwMD5sqUQAAAjdJREFUOMttU2lD2kAQHQhJgJBEgkCiECsEAzWg4oEnCi1oEi+qVmxUpC1Wq63l/39pyK7hnC/z9u3L7MxkBsA1j5fwkRRNkT7C64Fx8weCTIjleJ7n2BATDPhHBVNhgYxM48N0hBTCU0P30VhclGYGiBlJjMei/fNsgknKCM59mENATjKJWTdCYj6FcomklYySjqAcUvOJ9ygxBgkWRDWb+5jLquICkjAxnGQ86fhFRZF6VXokRVl0mGTcSdcfFp0ctHxhCQddKuQ1Jxcx3HswIEgOvayuuKmvqMuOl4SAHTNIojJzhaKrKBZyqGgy6AEvE0HsanqgH+lV5COMF4gQ7uTa+oBifQ13N0SAj8XkRmnTFWyWNjBifUByGG9t77iKne0tjDgSKB7j3dIe7jzIe6VdDHkK6HcFSOU8qqaYL0vvJE/3Y8D+QZeqVD9VK1T34DP0Y9TqCB4e6YaZPu7q3eO0aehHh4iu18BXc9AJnTk9s//NeePc/idnXzL0icPXOLgIXdrgqmBUh2bqq1G4st1l6AKu1ab9BG3cwLDdGPQ3gKZ6DRZLWtrt3T2M2v3drWaRrAXQEFoPOgHjRugPLaHRmw9RTFDyBIVMtUXRGcjvOvMDJtlPRm8h1Ok+TlQ8djsYRdvllDZ2r6XK7qyD3NZ/jWYid/TEABc17Z0b3GaPvXNmdOiTJ1HINp/x4fl3VhCfRp/1v7DqK1s3/5h19lVlX8Z23zbrb4WrvSlvNe70n9Wn/wOzz0huML2VFwAAAABJRU5ErkJggg==" />
           </svg>
 
           <!-- Hamburger Icon -->
-          <div class="2xl:hidden xl:hidden hamburger-btn mr-30px" id="hamburger">
+          <div class="2xl:hidden xl:hidden hamburger-btn mr-30px 2sm:mr-15px" id="hamburger">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -153,12 +159,12 @@
       <div id="menu" class="fixed z-20 hidden w-screen h-screen navigation bg-coverColor">
         <div
           class="mx-auto text-center uppercase text-navLink text-17px leading-12px tracking-2px pt-5px font-robotoBold">
-          <a class="block pt-33px activeNav" href="#">Račun</a>
-          <a class="block pt-33px" href="#">Korisnički servisi</a>
-          <a class="block pt-33px" href="#">Novi kupci</a>
-          <a class="block pt-33px" href="#">Zahtjevi i ugovori</a>
-          <a class="block pt-33px" href="#">Servisne informacije</a>
-          <a class="block text-headerLinks pt-33px" href="#">Ušteda energije
+          <a class="block pt-33px nav-link activeNav" href="#">Račun</a>
+          <a class="block pt-33px nav-link" href="#">Korisnički servisi</a>
+          <a class="block pt-33px nav-link" href="#">Novi kupci</a>
+          <a class="block pt-33px nav-link" href="#">Zahtjevi i ugovori</a>
+          <a class="block pt-33px nav-link" href="#">Servisne informacije</a>
+          <a class="block text-headerLinks pt-33px nav-link" href="#">Ušteda energije
           </a>
           <p
             class="text-white underline transition duration-500 ease-in-out transform rounded cursor-pointer bg-buttonCover hover:bg-headerBlue mt-20px hover:-translate-y-1 hover:scale-110 font-robotoBlack px-42px py-20px">
@@ -172,59 +178,60 @@
 
     <!-- Section 1 -->
     <section
-      class="bg-coverColor 2xl:bg-gradient-to-r 2xl:from-secondary-background-0 2xl:to-secondary-background-1 xl:bg-gradient-to-r xl:from-secondary-background-0 xl:to-secondary-background-1">
+      class="bg-coverColor 2xl:bg-gradient-to-r 2xl:from-secondary-background-0 2xl:to-secondary-background-1 xl:bg-gradient-to-r xl:from-secondary-background-0 xl:to-secondary-background-1 wow slideInRight"
+      data-wow-delay="0.9s">
       <div
-        class="mx-auto 2xl:px-30px xl:px-30px max-w-1700px lg:max-w-963px md:max-w-963px sm:max-w-541px 2sm:min-w-300px">
+        class="mx-auto 2xl:px-30px xl:px-50px max-w-1700px lg:max-w-963px md:max-w-963px sm:max-w-541px 2sm:min-w-300px">
         <!-- Slider 1 -->
         <div class="lg:mx-auto md:mx-auto sm:mx-auto 2sm:mx-auto owl-carousel slider1 owl-theme">
           <!-- Slider 1 - Item 1 -->
           <div
-            class="2xl:h-775px xl:h-670px lg:h-828px md:h-828px sm:h-564px 2sm:h-437px item 2xl:flex 2xl:justify-between xl:flex xl:justify-between">
+            class="2xl:h-775px xl:h-670px lg:h-828px md:h-828px sm:h-564px 2sm:h-449px item 2xl:flex 2xl:justify-between xl:flex xl:justify-between">
             <div
-              class="text-center 2xl:text-left xl:text-left lg:mx-auto md:mx-auto sm:mx-auto 2sm:mx-auto 2xl:mt-180px xl:mt-150px lg:mt-90px md:mt-90px sm:mt-87px 2sm:mt-55px lg:max-963px md:max-963px sm:max-w-541px 2sm:min-w-300px px-20px font-roboto wow slideInLeft"
-              data-wow-delay="0.5s">
+              class="text-center slider-title 2xl:text-left xl:text-left lg:mx-auto md:mx-auto sm:mx-auto 2sm:mx-auto 2xl:mt-180px xl:mt-150px lg:mt-90px md:mt-90px sm:mt-87px 2sm:mt-55px lg:max-963px md:max-963px sm:max-w-541px 2sm:min-w-300px px-20px font-roboto wow fadeIn"
+              data-wow-delay="1.5s" data-wow-duration="1.7s">
               <h1
-                class="font-robotoBold 2xl:w-400px xl:w-400px 2xl:leading-88px xl:leading-73px 2xl:text-74px xl:text-60px lg:text-60px md:text-60px sm:text-48px 2sm:text-35px">
-                EPCG & Mastercard
+                class="font-robotoBlack 2xl:w-650px xl:w-500px 2xl:leading-88px xl:leading-73px 2xl:text-74px xl:text-60px lg:text-60px md:text-60px sm:text-48px 2sm:text-27px">
+                Akcija "Podijelimo teret 8"
               </h1>
               <p
-                class="text-iconText 2xl:text-20px 2xl:w-390px 2xl:mt-23px xl:text-19px xl:w-390px xl:mt-23px lg:text-20px md:text-20px sm:text-18px 2sm:text-16px lg:mt-23px lg:max-w-534px md:mt-23px md:max-w-534px sm:mt-21px 2sm:mt-18px">
-                <span class="text-buttonCover">EPCG online portal i Mastercard za 4 eura u plusu. </span>Placanje
-                majskih ili junskih racuna Mastercard karticom na
-                portalu EPCG, korisnicima donosi doplatu od 4 eura.
+                class="text-iconText 2xl:text-20px 2xl:w-410px 2xl:mt-23px xl:text-19px xl:w-390px xl:mt-23px lg:text-20px md:text-20px sm:text-18px 2sm:text-16px lg:mt-23px lg:max-w-534px md:mt-23px md:max-w-534px sm:mt-21px 2sm:mt-18px">
+                Namijenjena je svim domaćinstvima koja žele da se priključe i svoja dugovanja izmire po izuzetno
+                povoljnijim uslovima.
               </p>
               <a class="block text-center text-white underline transition duration-500 ease-in-out transform rounded cursor-pointer bg-buttonCover hover:bg-headerBlue hover:-translate-y-1 hover:scale-110 w-166px mt-64px xl:mt-50px lg:hidden md:hidden sm:hidden 2sm:hidden font-robotoBlack px-34px py-15px text-16px"
                 href="#">Saznaj više</a>
             </div>
             <div
               class="block h-auto mx-auto hover-slider 2sm:relative sm:relative lg:relative lg:mt-80px md:relative md:mt-80px sm:mt-27px 2sm:mt-300px">
-              <img src="img/slider1-shape-dekstop.png" loading="lazy"
-                class="absolute slider-shape 2xl:bottom-0 sm:min-w-541px xl:right-0 xl:bottom-0 xl:max-w-963px lg:min-w-963px lg:top-145px md:min-w-963px md:top-145px 2sm:min-w-300px sm:top-141px 2sm:bottom-0 2xl:-right-90px 2xl:min-w-1157px wow slideInRight"
-                data-wow-delay="0.5s" alt="epcg" />
-              <img src="img/slider1-img-dekstop.png " loading="lazy "
-                class="absolute 2xl:bottom-0 2xl:right-187px 2xl:min-w-846px xl:max-w-710px xl:right-204px xl:bottom-0 lg:right-90px lg:top-0 lg:max-w-710px md:right-90px md:top-0 md:max-w-710px sm:max-w-434px sm:left-18px sm:top-33px 2sm:max-w-300px 2sm:right-16% 2sm:bottom-0 wow fadeInDown"
-                data-wow-delay="1s " alt="epcg " />
-              <img src="img/slider1-fleka-desktop.png " loading="lazy "
-                class="absolute 2xl:top-204px 2xl:right-94px xl:top-180px xl:right-125px xl:max-w-250px lg:max-w-250px lg:right-21px lg:top-70px md:max-w-250px md:right-21px md:top-70px sm:max-w-158px sm:right-44px sm:top-70px 2sm:right-5px 2sm:bottom-125px 2sm:max-w-158px wow slideInRight"
-                data-wow-delay="0.5s " alt="epcg " />
-
-              <p class="absolute text-white uppercase transform leading-10px -rotate-12 font-roboto 2xl:leading-20px 2xl:text-14px 2xl:right-177px 2xl:top-262px xl:leading-17px xl:text-13px xl:right-190px xl:top-229px lg:leading-17px lg:text-12px lg:right-98px lg:top-118px md:leading-17px md:text-12px text-8px md:right-98px md:top-118px sm:right-88px sm:top-101px 2sm:right-46px 2sm:bottom-198px wow slideInRight"
-                data-wow-delay="0.5s ">
-                plaćanje <span class="block">mastercard karticom</span>
+              <img src="img/slider1-shape2.png" loading="lazy"
+                class="absolute slider-shape 2xl:bottom-0 sm:min-w-541px xl:right-0 xl:bottom-0 xl:max-w-930px lg:min-w-963px lg:top-226px lg:bottom-0 md:min-w-963px md:top-226px 2sm:min-w-300px sm:top-141px 2sm:-bottom-19px 2xl:-right-90px 2xl:min-w-1149px wow slideInRight"
+                data-wow-delay="1s" alt="epcg" />
+              <img src="img/slider1-img2.png " loading="lazy "
+                class="absolute slider-img 2xl:bottom-24px 2xl:right-431px 2xl:min-w-430px xl:max-w-360px xl:right-415px xl:bottom-18px lg:right-306px lg:-top-82px lg:max-w-363px md:right-306px md:-top-82px md:max-w-363px sm:left-92px sm:-top-30px sm:max-w-202px 2sm:max-w-179px 2sm:left-17% 2sm:-bottom-7px wow slideInRight"
+                data-wow-delay="1.2s" alt="epcg " />
+              <img src="img/slider1-img2-fleka.png " loading="lazy "
+                class="absolute slider-fleka 2xl:min-w-327px 2xl:top-165px 2xl:right-129px xl:top-180px xl:right-183px xl:max-w-250px lg:max-w-250px lg:right-78px lg:top-50px md:max-w-250px md:right-78px md:top-50px sm:max-w-158px sm:right-99px sm:top-25px 2sm:left-52% 2sm:bottom-125px 2sm:max-w-158px wow fadeIn"
+                data-wow-delay="2s" alt="epcg " />
+              <p class="absolute text-white uppercase transform slider-fleka leading-10px -rotate-12 font-roboto 2xl:leading-20px 2xl:text-14px 2xl:right-265px 2xl:top-250px xl:leading-17px xl:text-13px xl:right-265px xl:top-240px lg:leading-17px lg:text-12px lg:right-167px lg:top-113px md:leading-17px md:text-12px text-8px md:right-167px md:top-113px sm:right-150px sm:top-59px 2sm:left-57% 2sm:bottom-204px wow fadeIn"
+                data-wow-delay="2s">
+                akcija <span class="block">"Podijelimo teret 8"</span>
               </p>
-              <p class="absolute text-white transform font-robotoBlack leading-20px -rotate-12 2xl:leading-34px 2xl:text-32px 2xl:right-112px 2xl:top-306px xl:text-25px xl:leading-26px xl:right-162px xl:top-269px lg:text-25px lg:leading-26px lg:right-59px lg:top-157px md:text-25px md:leading-26px md:right-59px md:top-157px text-17px sm:right-59px sm:top-123px 2sm:right-18px 2sm:bottom-155px wow slideInRight"
-                data-wow-delay="0.5s ">
-                Donosi doplatu <span class="block">od 4 eura</span>
+              <p class="absolute text-white transform slider-fleka font-robotoBlack leading-20px -rotate-12 2xl:w-500 2xl:leading-34px 2xl:text-32px 2xl:right-155px 2xl:top-285px xl:text-23px xl:leading-26px xl:right-215px xl:top-276px lg:text-25px lg:leading-26px lg:right-92px lg:top-148px md:text-25px md:leading-26px md:right-92px md:top-148px text-17px sm:text-15px sm:right-111px sm:top-80px 2sm:text-15px  2sm:left-59% 2sm:bottom-144px wow fadeIn"
+                data-wow-delay="2s">
+                Izmiri dugovanja
+                <span class="block">po povoljnim</span>
+                <span class="block">uslovima</span>
               </p>
             </div>
           </div>
           <!-- Slider 1 - Item 2 -->
           <div
-            class="2xl:h-775px xl:h-670px lg:h-828px md:h-828px sm:h-564px 2sm:h-437px item 2xl:flex 2xl:justify-between xl:flex xl:justify-between">
+            class="2xl:h-775px xl:h-670px lg:h-828px md:h-828px sm:h-564px 2sm:h-449px item 2xl:flex 2xl:justify-between xl:flex xl:justify-between">
             <div
-              class="text-center 2xl:text-left xl:text-left lg:mx-auto md:mx-auto sm:mx-auto 2sm:mx-auto 2xl:mt-180px xl:mt-150px lg:mt-90px md:mt-90px sm:mt-87px 2sm:mt-55px lg:max-963px md:max-963px sm:max-w-541px 2sm:min-w-300px px-20px font-roboto">
+              class="text-center slider-title 2xl:text-left xl:text-left lg:mx-auto md:mx-auto sm:mx-auto 2sm:mx-auto 2xl:mt-180px xl:mt-150px lg:mt-90px md:mt-90px sm:mt-87px 2sm:mt-55px lg:max-963px md:max-963px sm:max-w-541px 2sm:min-w-300px px-20px font-roboto">
               <h1
-                class="font-robotoBold 2xl:w-400px xl:w-400px 2xl:leading-88px xl:leading-73px 2xl:text-74px xl:text-60px lg:text-60px md:text-60px sm:text-48px 2sm:text-35px">
+                class="font-robotoBlack 2xl:w-400px xl:w-400px 2xl:leading-88px xl:leading-73px 2xl:text-74px xl:text-60px lg:text-60px md:text-60px sm:text-48px 2sm:text-27px"">
                 EPCG & Mastercard
               </h1>
               <p
@@ -242,57 +249,61 @@
                 class="absolute slider-shape 2xl:bottom-0 sm:min-w-541px xl:right-0 xl:bottom-0 xl:max-w-963px lg:min-w-963px lg:top-145px md:min-w-963px md:top-145px 2sm:min-w-300px sm:top-141px 2sm:bottom-0 2xl:-right-90px 2xl:min-w-1157px"
                 alt="epcg" />
               <img src="img/slider1-img-dekstop.png " loading="lazy "
-                class="absolute 2xl:bottom-0 2xl:right-187px 2xl:min-w-846px xl:max-w-710px xl:right-204px xl:bottom-0 lg:right-90px lg:top-0 lg:max-w-710px md:right-90px md:top-0 md:max-w-710px sm:max-w-434px sm:left-18px sm:top-33px 2sm:max-w-300px 2sm:right-16% 2sm:bottom-0"
+                class="slider-img absolute 2xl:bottom-0 2xl:right-187px 2xl:min-w-846px xl:max-w-710px xl:right-204px xl:bottom-0 lg:right-90px lg:top-0 lg:max-w-710px md:right-90px md:top-0 md:max-w-710px sm:max-w-434px sm:left-18px sm:top-33px 2sm:max-w-300px 2sm:right-16% 2sm:bottom-0"
                 alt="epcg " />
               <img src="img/slider1-fleka-desktop.png " loading="lazy "
-                class="absolute 2xl:top-204px 2xl:right-94px xl:top-180px xl:right-125px xl:max-w-250px lg:max-w-250px lg:right-21px lg:top-70px md:max-w-250px md:right-21px md:top-70px sm:max-w-158px sm:right-44px sm:top-70px 2sm:right-5px 2sm:bottom-125px 2sm:max-w-158px"
+                class="absolute slider-fleka 2xl:top-204px 2xl:right-94px xl:top-180px xl:right-125px xl:max-w-250px lg:max-w-250px lg:right-21px lg:top-70px md:max-w-250px md:right-21px md:top-70px sm:max-w-158px sm:right-44px sm:top-70px 2sm:right-5px 2sm:bottom-125px 2sm:max-w-158px"
                 alt="epcg " />
+
               <p
-                class="absolute text-white uppercase transform leading-10px -rotate-12 font-roboto 2xl:leading-20px 2xl:text-14px 2xl:right-177px 2xl:top-262px xl:leading-17px xl:text-13px xl:right-190px xl:top-229px lg:leading-17px lg:text-12px lg:right-98px lg:top-118px md:leading-17px md:text-12px text-8px md:right-98px md:top-118px sm:right-88px sm:top-101px 2sm:right-46px 2sm:bottom-198px">
+                class="absolute text-white uppercase transform slider-fleka leading-10px -rotate-12 font-roboto 2xl:leading-20px 2xl:text-14px 2xl:right-177px 2xl:top-262px xl:leading-17px xl:text-13px xl:right-190px xl:top-229px lg:leading-17px lg:text-12px lg:right-98px lg:top-118px md:leading-17px md:text-12px text-8px md:right-98px md:top-118px sm:right-88px sm:top-101px 2sm:right-46px 2sm:bottom-198px">
                 plaćanje <span class="block">mastercard karticom</span>
               </p>
               <p
-                class="absolute text-white transform font-robotoBlack leading-20px -rotate-12 2xl:leading-34px 2xl:text-32px 2xl:right-112px 2xl:top-306px xl:text-25px xl:leading-26px xl:right-162px xl:top-269px lg:text-25px lg:leading-26px lg:right-59px lg:top-157px md:text-25px md:leading-26px md:right-59px md:top-157px text-17px sm:right-59px sm:top-123px 2sm:right-18px 2sm:bottom-155px">
+                class="absolute text-white transform slider-fleka font-robotoBlack leading-20px -rotate-12 2xl:leading-34px 2xl:text-32px 2xl:right-112px 2xl:top-306px xl:text-25px xl:leading-26px xl:right-162px xl:top-269px lg:text-25px lg:leading-26px lg:right-59px lg:top-157px md:text-25px md:leading-26px md:right-59px md:top-157px text-17px sm:right-59px sm:top-123px 2sm:right-18px 2sm:bottom-155px">
                 Donosi doplatu <span class="block">od 4 eura</span>
               </p>
             </div>
           </div>
           <!-- Slider 1 - Item 3 -->
           <div
-            class="2xl:h-775px xl:h-670px lg:h-828px md:h-828px sm:h-564px 2sm:h-437px item 2xl:flex 2xl:justify-between xl:flex xl:justify-between">
+            class="2xl:h-775px xl:h-670px lg:h-828px md:h-828px sm:h-564px 2sm:h-449px item 2xl:flex 2xl:justify-between xl:flex xl:justify-between">
             <div
               class="text-center 2xl:text-left xl:text-left lg:mx-auto md:mx-auto sm:mx-auto 2sm:mx-auto 2xl:mt-180px xl:mt-150px lg:mt-90px md:mt-90px sm:mt-87px 2sm:mt-55px lg:max-963px md:max-963px sm:max-w-541px 2sm:min-w-300px px-20px font-roboto">
               <h1
-                class="font-robotoBold 2xl:w-400px xl:w-400px 2xl:leading-88px xl:leading-73px 2xl:text-74px xl:text-60px lg:text-60px md:text-60px sm:text-48px 2sm:text-35px">
-                EPCG & Mastercard
+                class="font-robotoBlack 2xl:w-437px xl:w-400px 2xl:leading-88px xl:leading-73px 2xl:text-74px xl:text-60px lg:max-w-525px lg:mx-auto lg:text-60px md:max-w-525px md:mx-auto md:text-60px sm:text-48px 2sm:text-27px">
+                Zlatni tim: Energija koja pokrece 2
               </h1>
               <p
-                class="text-iconText 2xl:text-20px 2xl:w-390px 2xl:mt-23px xl:text-19px xl:w-390px xl:mt-23px lg:text-20px md:text-20px sm:text-18px 2sm:text-16px lg:mt-23px lg:max-w-534px md:mt-23px md:max-w-534px sm:mt-21px 2sm:mt-18px">
-                <span class="text-buttonCover">EPCG online portal i Mastercard za 4 eura u plusu. </span>Placanje
-                majskih ili junskih racuna Mastercard karticom na
-                portalu EPCG, korisnicima donosi doplatu od 4 eura.
+                class="text-iconText 2xl:text-20px 2xl:w-400px 2xl:mt-23px xl:text-19px xl:w-390px xl:mt-23px lg:text-20px md:text-20px sm:text-18px 2sm:text-16px lg:mt-23px lg:max-w-534px md:mt-23px md:max-w-534px sm:mt-21px 2sm:mt-18px">
+                Glavna nagrada je <span class="text-black font-robotoBold">Automobil Opel Astra</span>, elektricni
+                motorcikl i mnoge druge nagrade...
               </p>
               <a class="block text-center text-white underline transition duration-500 ease-in-out transform rounded cursor-pointer bg-buttonCover hover:bg-headerBlue hover:-translate-y-1 hover:scale-110 w-166px mt-64px xl:mt-50px lg:hidden md:hidden sm:hidden 2sm:hidden font-robotoBlack px-34px py-15px text-16px"
                 href="#">Saznaj više</a>
             </div>
             <div
               class="block h-auto mx-auto hover-slider 2sm:relative sm:relative lg:relative lg:mt-80px md:relative md:mt-80px sm:mt-27px 2sm:mt-300px">
-              <img src="img/slider1-shape-dekstop.png" loading="lazy"
-                class="absolute slider-shape 2xl:bottom-0 sm:min-w-541px xl:right-0 xl:bottom-0 xl:max-w-963px lg:min-w-963px lg:top-145px md:min-w-963px md:top-145px 2sm:min-w-300px sm:top-141px 2sm:bottom-0 2xl:-right-90px 2xl:min-w-1157px"
+              <img src="img/slider1-shape3.png" loading="lazy"
+                class="absolute slider-shape 2xl:bottom-0 sm:min-w-541px xl:right-0 xl:bottom-0 xl:max-w-724px lg:min-w-926px lg:top-145px md:min-w-926px md:top-145px 2sm:min-w-300px sm:top-141px 2sm:bottom-0 2xl:-right-90px 2xl:min-w-926px"
                 alt="epcg" />
-              <img src="img/slider1-img-dekstop.png " loading="lazy "
-                class="absolute 2xl:bottom-0 2xl:right-187px 2xl:min-w-846px xl:max-w-710px xl:right-204px xl:bottom-0 lg:right-90px lg:top-0 lg:max-w-710px md:right-90px md:top-0 md:max-w-710px sm:max-w-434px sm:left-18px sm:top-33px 2sm:max-w-300px 2sm:right-16% 2sm:bottom-0"
+
+              <img src="img/slider1-img3-car.png " loading="lazy "
+                class="absolute 2xl:bottom-73px 2xl:right-63px 2xl:min-w-788px xl:max-w-660px xl:right-74px xl:bottom-34px lg:left-90px lg:top-200px lg:max-w-500px md:left-90px md:top-200px md:max-w-500px sm:max-w-434px sm:left-18px sm:top-33px 2sm:max-w-300px 2sm:right-16% 2sm:bottom-0"
                 alt="epcg " />
-              <img src="img/slider1-fleka-desktop.png " loading="lazy "
-                class="absolute 2xl:top-204px 2xl:right-94px xl:top-180px xl:right-125px xl:max-w-250px lg:max-w-250px lg:right-21px lg:top-70px md:max-w-250px md:right-21px md:top-70px sm:max-w-158px sm:right-44px sm:top-70px 2sm:right-5px 2sm:bottom-125px 2sm:max-w-158px"
+              <img src="img/slider1-img3-woman.png " loading="lazy "
+                class="absolute 2xl:bottom-0 2xl:right-494px 2xl:min-w-611px xl:max-w-460px xl:right-457px xl:bottom-0 lg:right-90px lg:top-0 lg:max-w-480px md:right-90px md:top-0 md:max-w-480px sm:max-w-434px sm:left-18px sm:top-33px 2sm:max-w-300px 2sm:right-16% 2sm:bottom-0"
+                alt="epcg " />
+              <img src="img/slider1-img3-fleka.png " loading="lazy "
+                class="absolute 2xl:top-221px 2xl:right-106px xl:top-220px xl:right-95px xl:max-w-230px lg:max-w-230px lg:right-516px lg:top-27px md:max-w-230px md:right-516px md:top-27px sm:max-w-158px sm:right-44px sm:top-70px 2sm:right-5px 2sm:bottom-125px 2sm:max-w-158px"
                 alt="epcg " />
               <p
-                class="absolute text-white uppercase transform leading-10px -rotate-12 font-roboto 2xl:leading-20px 2xl:text-14px 2xl:right-177px 2xl:top-262px xl:leading-17px xl:text-13px xl:right-190px xl:top-229px lg:leading-17px lg:text-12px lg:right-98px lg:top-118px md:leading-17px md:text-12px text-8px md:right-98px md:top-118px sm:right-88px sm:top-101px 2sm:right-46px 2sm:bottom-198px">
-                plaćanje <span class="block">mastercard karticom</span>
+                class="absolute text-white uppercase transform leading-10px -rotate-12 font-roboto 2xl:leading-20px 2xl:text-14px 2xl:right-213px 2xl:top-270px xl:leading-17px xl:text-13px xl:right-194px xl:top-264px lg:leading-17px lg:text-12px lg:right-620px lg:top-71px md:leading-17px md:text-12px text-8px md:right-620px md:top-71px sm:right-88px sm:top-101px 2sm:right-46px 2sm:bottom-198px">
+                prva nagrada
               </p>
               <p
-                class="absolute text-white transform font-robotoBlack leading-20px -rotate-12 2xl:leading-34px 2xl:text-32px 2xl:right-112px 2xl:top-306px xl:text-25px xl:leading-26px xl:right-162px xl:top-269px lg:text-25px lg:leading-26px lg:right-59px lg:top-157px md:text-25px md:leading-26px md:right-59px md:top-157px text-17px sm:right-59px sm:top-123px 2sm:right-18px 2sm:bottom-155px">
-                Donosi doplatu <span class="block">od 4 eura</span>
+                class="absolute text-white transform font-robotoBlack leading-20px -rotate-12 2xl:leading-34px 2xl:text-32px 2xl:right-154px 2xl:top-288px xl:text-29px xl:leading-26px xl:right-144px xl:top-287px lg:text-27px lg:leading-26px lg:right-573px lg:top-97px md:text-27px md:leading-26px md:right-573px md:top-97px text-17px sm:right-59px sm:top-123px 2sm:right-18px 2sm:bottom-155px">
+                Opel Astra <span class="block">4DR Enjoy</span>
               </p>
             </div>
           </div>
@@ -305,10 +316,10 @@
       <div
         class="mx-auto 2xl:my-102px xl:my-130px mt-80px 2sm:mt-40px 2xl:w-1417px xl:w-1157px lg:max-w-708px md:max-w-708px sm:max-w-541px 2sm:min-w-300px">
         <!-- Icons -->
-        <div class="grid grid-cols-2 2xl:grid-cols-4 xl:grid-cols-4 px-20px">
+        <div class="grid grid-cols-2 2xl:grid-cols-4 xl:grid-cols-4 px-20px 2xl:-mt-4px 2xl:pb-29px">
           <!-- Icon 1 -->
           <div
-            class="text-center transition duration-500 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:scale-110 2xl:py-64px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:p-20px hover:shadow-2xl font-roboto max-w-271px 2xl:w-357px wow fadeInDown"
+            class="text-center 2xl:py-64px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:p-20px hover:shadow-2xl font-roboto max-w-271px 2xl:max-w-357px wow fadeIn"
             data-wow-delay="0.2s ">
             <h2
               class="mx-auto 2xl:hidden xl:hidden hover:underline font-robotoBlack lg:text-25px md:text-25px sm:text-22px 2sm:max-w-110px 2sm:text-19px">
@@ -318,78 +329,85 @@
               class="mx-auto lg:hidden md:hidden sm:hidden 2sm:hidden hover:underline font-robotoBlack 2xl:text-24px xl:text-22px">
               Sve o Vašem računu
             </h2>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67px"
-              height="78px" class="mx-auto 2xl:mt-56px mt-41px 2sm:mt-38px 2sm:w-52px sm:w-52px">
-              <image x="0px" y="0px" class="mx-auto 2xl:mt-56px mt-41px 2sm:mt-38px 2sm:w-52px sm:w-52px" width="67px"
-                height="78px"
-                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABOCAMAAABMilufAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA51BMVEUAAAAZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcguesguesguesdjMAaTYQguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesfqdwbaJ0fs+Uemc3////IVnXmAAAAR3RSTlMACzpmhJ6oqyx0I4AFXaoRhhiYF5kKkXdCDqJjElkCnC1hiQOpDRwhCzNAWcACWL/8Jck27hzqtZjY98uFIpEJzxXOkCCE9qOkGNsAAAABYktHREz3bxDzAAAAB3RJTUUH5QMKDDc6/VE6xwAAAXJJREFUWMPt19dqwzAUgGFl+WQ2e++9msTZO85Wmr7/+9Rp6KCt5GOLQqH+r6UPJBDoEMLOYrXZHRJIDrvNaiFGcrok+EhyOXULbg98zePWJXh9D/C9B58XT/gD8HMBP5YIhoBVKIgjwhFgFwljiGgMeMWiCCMO/OLaRAK0SmgRyZSmkUpqGGlNAiDNJzISwpAyXCOLIACyPCKXRxn5HMcooAiAAscoIo0ixyghjRKbKFeQRqXMNKpIAqDKNMJog/16a2ijxjTqaKP+W0aj2Wq12o/Y2urqZuMz0On2ZKp2ecJ2uS2Xe93OG9Ef0Hs6DbVB/04MR9SwQUfDGzGeUAGDTsaqMaVCBp2qJ6GCBh2SmbAxI3NhY05kYUMmVNigf9K4PmO7Mg2DmYZpmIZpmIZpmMY/MhbCxIIshY0lWQkbK7KWBQl5TchG0Niof35lK0RsldvwsdsLEPvdfQhSDkbvRD4o7wPd8bQ86wbOy9PxdfcLx/PxeylnEaAAAAAASUVORK5CYII=" />
-            </svg>
+            <div class="relative mx-auto icon-first 2xl:mt-56px mt-41px 2sm:mt-38px ">
+              <img src="img/icon-first-lightBlue.png"
+                class="icon-animate icon-first-light absolute top-20px left-40% xl:left-37% lg:left-32% md:left-32% sm:left-37% 2sm:left-36% w-67px 2sm:w-52px sm:w-52px"
+                loading="lazy" alt="epcg">
+              <img src="img/icon-first-darkBlue.png"
+                class="icon-animate icon-first-dark absolute top-0 left-44% xl:left-42% lg:left-39% md:left-39% sm:left-42% 2sm:left-41% w-41px 2sm:w-35px sm:w-35px " loading="lazy" alt="epcg">
+            </div>
+
 
             <p
-              class="2xl:mt-60px mt-45px 2sm:mt-38px 2xl:w-224px xl:max-w-179px sm:max-w-179px 2sm:max-w-135px text-iconText 2xl:text-16px xl:text-15px lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
+              class="2xl:mt-133px mt-115px 2xl:w-224px xl:max-w-179px sm:max-w-179px 2sm:max-w-135px text-iconText 2xl:text-16px xl:text-15px lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
               Kako da provjerite stanje na vašem računu? Na koji način možete
               platiti svoj račun?
             </p>
+
+            <a href="#" class="hidden underline 2xl:block xl:block mt-57px text-buttonCover text-16px font-robotoBlack">Više o vašem
+              računu</a>
           </div>
           <!-- Icon 2 -->
           <div
-            class="text-center transition duration-500 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:scale-110 2xl:py-64px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:p-20px hover:shadow-2xl font-roboto max-w-271px 2xl:w-357px wow fadeInDown"
-            data-wow-delay="0.3s ">
+            class="text-center 2xl:py-64px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:p-20px hover:shadow-2xl font-roboto max-w-271px 2xl:max-w-357px wow fadeIn"
+            data-wow-delay="0.4s ">
             <h2
               class="mx-auto hover:underline font-robotoBlack 2xl:text-24px xl:text-22px lg:text-25px md:text-25px sm:text-22px 2sm:text-19px">
               Plati račun
             </h2>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93px"
-              height="72px" class="mx-auto 2xl:mt-61px mt-46px sm:mt-43px 2sm:mt-38px 2sm:w-73px sm:w-73px">
-              <image x="0px" y="0px" width="93px" height="72px"
-                class="mx-auto 2xl:mt-61px mt-46px sm:mt-43px 2sm:mt-38px 2sm:w-73px sm:w-73px"
-                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF0AAABICAMAAACjtAnZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABSlBMVEUAAAAguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesZQHcZQHcZQHcZQHcZQHcZQHcZRXwbZ5wZQHcZQHcZQHcaWpAZQHcZQHcZQ3obZpwZQHcaVIsZQHcbYpcZQHcZSH8guesZQHcaV40ZQHcbYJYZQHcZQnkbZ50aTYQaVYsbW5EbZJoZQXgaV40guesguesbaJ0bbqIceK0djcEfrN4dhLkgs+YccaYccKUfseMdfrIeotUcgbUba6Agt+kgtuj///9xwWuVAAAAXHRSTlMABz5tkrrc8fDbbD0GJHm89nciDmfGxWYNFozyihQLgvRP5ONOD6ajMd/dL1T3U3D+eFUQUQyEEVGBnamrs/wFW6jZDoWw+4fOXu0UtyNX1Ijppa79wM/c9K3TCjwTSnUAAAABYktHRG27BgCtAAAAB3RJTUUH5QMKDQY1qnFK0wAAAftJREFUWMPV2WdTAjEQBuCoNBEFBcGCgKJiF+zlFHtv2Eti7/r/P3vAOArs3W2OW2d8f8AzmUtuk2wYk0xFZZXN7nByNa5qu81d45EVNFNb5/Xxovi89Q0W0P5AI9dIMNRUnt3c0sp14gy3mbcj0Rg3SCwaMYm3dxjZ2cQ7zdhd3Rg7m4RfGu/pxeKc9/VL4gODeFxdn0NS+LCMrSbplsBTkriaFNnIc8GOfsQMzpO4b98jNaG/phazckYllmJh+hDrHv0TlSZhiI+Zxzk3KgrjqNqilbhBSZsoB+c8+iNNTk3PzCoFmZsXxbm+ub1D67Hvep9eWFRKsiTA3D9g+XAeX14ptZXVNVgXj9jhO3OrMr0O4MqG0MrTM5IPZPVNCFe2NHXxgtSDKr69COE7QievSH6XsT1w6Pt6+htSV0vxAahn9PR3pO5l7BDCj471dPGB030eBg79RBcXn8jBV8L6qTW6G9bPrNFtsJ6xRrfD+rk1ugPW16zRXbAurNE5qF/8Y532yxDPKu2KpP2baCsBbRWzrALT7h60Ox+8a1/q6RK7Nu2Jg/a0RHfSC9GfUolP2MS3A+qbzd/fymhvlMS3YeKbPG0XgriDQtz9Ie5cEXfdiDuGxN1O4k4to+0yM2SH/Mokzmi7+9n4A0Etu+yXiVwIX1XykXoR+gIvIVxrr5MQMwAAAABJRU5ErkJggg==" />
-            </svg>
+
+            <div class="relative mx-auto icon-second 2xl:mt-56px mt-41px 2sm:mt-38px ">
+              <img src="img/icon-second-lightBlue.png" class="absolute top-3px left-40% xl:left-37% lg:left-32% md:left-32% sm:left-37% 2sm:left-36% w-72px 2sm:w-52px sm:w-52px"
+                loading="lazy" alt="epcg">
+              <img src="img/icon-second-darkBlue.png"
+                class="absolute icon-second-animate icon-second-dark top-24px left-118px xl:left-81px lg:left-42px md:left-42px sm:left-58px sm:top-21px 2sm:left-53px 2sm:top-22px w-52px 2sm:w-33px sm:w-33px" loading="lazy"
+                alt="epcg">
+            </div>
 
             <p
-              class="2xl:mt-60px mt-45px 2sm:mt-38px 2xl:w-237px 2xl:text-16px xl:max-w-179px xl:text-15px sm:max-w-179px 2sm:max-w-158px text-iconText lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
+              class="2xl:mt-133px mt-115px 2xl:w-237px 2xl:text-16px xl:max-w-179px xl:text-15px sm:max-w-179px 2sm:max-w-158px text-iconText lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
               Samo za "Domaćinstva " - platite račun iz udobnosti Vašeg doma.
               U polje poziv na broj...
             </p>
           </div>
           <!-- Icon 3 -->
           <div
-            class="text-center transition duration-500 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:scale-110 2xl:py-64px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:p-20px hover:shadow-2xl 2sm:mt-15px font-roboto max-w-271px 2xl:w-357px wow fadeInDown"
-            data-wow-delay="0.4s ">
+            class="text-center 2xl:py-64px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:p-20px hover:shadow-2xl 2sm:mt-15px font-roboto max-w-271px 2xl:max-w-357px wow fadeIn"
+            data-wow-delay="0.6s ">
             <h2
               class="hover:underline font-robotoBlack 2xl:text-24px xl:text-22px lg:text-25px md:text-25px sm:text-22px 2sm:text-19px">
               Korisnički servis
             </h2>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67px"
-              height="71px" class="mx-auto 2xl:mt-56px mt-41px 2sm:mt-34px 2sm:w-56px sm:w-56px">
-              <image x="0px" y="0px" width="67px" height="71px"
-                class="mx-auto 2xl:mt-56px mt-41px 2sm:mt-34px 2sm:w-56px sm:w-56px"
-                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABHCAMAAABrhQpXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABMlBMVEUAAAAZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQXgZSX8aUIYaVowbWpAbXJIbXpQbX5UZQHcaSoEbYJUbZpwZQHcZRn0bY5kZQHcZSH8bZ50guesekcUguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesbaJ0gt+kbdakguesfpNcdjL8guOodfbEgtecceq4cgrYelskbap8fr+EdhLkfruEdj8MbdKkgs+Yfqt0fo9cfoNQfoNL///9r9pOuAAAATnRSTlMABTJggpypqxRfoAdZqB6RL6RagZujkHWtuMXS2uDk5ky76PsbtPGIt/0ZuQRu8iPITvF3AY6TgV4y9wzakC/8x1BGqxH5Z7Q4bbzc7PjGdINcAAAAAWJLR0Rltd2InwAAAAd0SU1FB+UDCg0HKNBsF0sAAAH9SURBVFjD7dTrVwFBGMfxQTWidSu6bEoq3SSpRHRBdFdPpBBF/f9/Q1tqWXt51s7pne9L8zufc8aZs4SoZzJbRkbH6NjoiMVsIkayjttoN9u4dWDBPsFRadyEfTDC4aTynI5BCJebKuV2DUBwVDlON+JwU7XcOq9jd1L1nPr+WA/VyqOHsHKaBqfnnViodhacMNkQw4Y/ezPFMjNfRc9lJlFjEjWmUGMKNTjU4FADJSgdGkODyfCihBc1fKjhQ41pcTszO8fP+xcWF/zz/NzsjPj7NGoEOsMlPrhc7G05yC91jgKosSKsVvlQUakQvyqcrqAGWVv3bxTV2vCvr+HE5lZRu61NRAhvR+4fNImH+8h2WIvYiQLAo6bxKCyiO+rEbgy+K2kQpZ9FbFeN2INO5SdV4qn8u9lTFPYP4K/KswrxXBE3B/sKRhy6VV4UiZdKzyYuJw5BUrUmE2pV6eSwn0hAX/XXPuK13j9JSInkEchqNN9E4K3ZkA+Okr1EKg2KvbfaH58f7da78nE61WMcg7GOu8TJqUHj9ER8GWcGCYCzv1eSMUwAZH6NKIMR7RBZBgIg+2PkmIzcN3GeZzLy54JRYCIACoJxwWhcCF/QGKMRC5NLRgLgklwxG1eSz5ex4uSa2bgmN8zGDbllNm7JHbNxR5gJgKExNP7b+AI5eA5drAmFFwAAAABJRU5ErkJggg==" />
-            </svg>
-
+            <div class="relative mx-auto icon-third 2xl:mt-56px mt-41px 2sm:mt-34px 2sm:w-56px sm:w-56px ">
+              <img src="img/icon-third-lightBlue.png" class="icon-animate icon-third-light absolute top-24px left-40% xl:left-37% lg:left-32% md:left-32% sm:left-6% 2sm:left-3% w-67px 2sm:w-52px sm:w-52px"
+                loading="lazy" alt="epcg">
+              <img src="img/icon-third-darkBlue.png"
+                class="absolute icon-animate icon-third-dark -top-5px left-152px xl:left-115px lg:left-77px md:left-77px sm:left-15px sm:top-0 2sm:-top-2px 2sm:left-13px w-35px 2sm:w-28px sm:w-28px" loading="lazy"
+                alt="epcg">
+            </div>
             <p
-              class="2xl:mt-60px mt-45px 2sm:mt-38px 2xl:w-224px 2xl:text-16px xl:max-w-179px xl:text-15px sm:max-w-179px 2sm:max-w-135px text-iconText lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
+              class="2xl:mt-133px mt-115px 2xl:w-224px 2xl:text-16px xl:max-w-179px xl:text-15px sm:max-w-179px 2sm:max-w-135px text-iconText lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
               Na interaktivnoj mapi EPCG, klikom na odgovarajući grad, možete
               dobiti informacije...
             </p>
           </div>
           <!-- Icon 4 -->
           <div
-            class="text-center transition duration-500 ease-in-out transform cursor-pointer hover:-translate-y-1 hover:scale-110 2xl:py-64px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:mt-15px 2sm:p-20px hover:shadow-2xl font-roboto max-w-271px 2xl:w-357px wow fadeInDown"
-            data-wow-delay="0.5s ">
+            class="text-center 2xl:pt-64px 2xl:pb-120px xl:py-50px lg:p-40px md:p-40px sm:p-30px 2sm:mt-15px 2sm:p-20px hover:shadow-2xl font-roboto max-w-271px 2xl:max-w-357px wow fadeIn"
+            data-wow-delay="0.8s ">
             <h2
               class="hover:underline font-robotoBlack 2xl:text-24px xl:text-22px lg:text-25px md:text-25px sm:text-22px 2sm:text-19px">
               EPCG lokacije
             </h2>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78px"
-              height="75px" class="mx-auto 2xl:mt-56px mt-41px 2sm:mt-34px 2sm:w-65px sm:w-65px">
-              <image x="0px" y="0px" width="78px" height="75px"
-                class="mx-auto 2xl:mt-56px mt-41px 2sm:mt-34px 2sm:w-65px sm:w-65px"
-                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAABLCAMAAADpuUGcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAB9VBMVEUAAAAZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQHcZQXgZQ3oZRXwZQHcZQHcaSoEaUYcaVowbW5AbXpQbYpcbZJkbZZsbZ50guesguesguesdi78guesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesguesbaJ0guesguOoceq4frN4bap8elMcdfbIfseMcbaMfo9YbaJ4eksYcgrcgteccd6wfsOMccKYfq90bbKEfpdgfoNMbaZ4foNQfndAfntEfndEfpNcceK3////adMwKAAAAiXRSTlMACjRffZekqwEyc6eLFXmgTFdJLaoOmm0lex9gnB5GZIyUmJKHdVw/Gy8DWiF2IGitsLMPorrH0dvk7fL4/gk7dMMBM3q/+jiN4g5t1RSI9Ah+Rt0FiQ/AyQK3efjDcxDwaKsKvq93+zbPA2vsDHXnBlrBI3jS0SFmre4oYJfFG0F9m7TG1+j9X6SqI+QAAAABYktHRKa3sBuVAAAAB3RJTUUH5QMKDQgemE6eHQAAAw5JREFUWMOt1lVbG0EUBuAhyODu7i4J7gR3ghM8ENytxd3K4O6EtvA/SyDQyO7O2ZDvcp9v32cvzuwZhCgxEhibmJphbGZqYiwworW5Y25haYXVYmVpYa6/JrDGOrEW6InZ2GLG2Nro9Wl2mCV2enygPeaIPV/NAXPGgZ/miClx5KM5OdM4Zye45uJK0zB2dQFzbnQNYzeo5g7RMHYHch4wzgOmecI0jD1BnBeU84Jo5t5Qzhvyd/GBahj7ADhfOOcL4PzgnJ/hxkQZyKj4wzl/ABcA5wIAXCCcCwRwQXAuCMAFw7lgABcC50IAXCicCwVwYXAuDMCFw7lwAAefFMic8Di0kCOLUASUiwBxkcD/p3ckiENRMC4KpiEb6h1AGWfwvQx0MCBH4iPREC4azKEYuhYD11As/QYVy4NDceqvCkWi+HiRSKj+LI6PhhISsTApOSU1LT0jM2tPlazMjPS01JTkJCFOTOCBZeeIczO+FN1kZeSKc7JBVF5+QWERIfsHexw52CekqLAgP4+CFZeUko8cHrFrR4eqUmlJMbtVVl5B/ueYnTtWq1WUlzFilVUSopETNu1EsyepqtTBqmu0MEJOz5i1s1PtpqSmWlOrrSO6Ob9g0i7OGap1tWpYfQNhzCUTd8ncbaj/1BqbCEuudLUrtm5To0qTsjXI9Y22dnPNWpa+e80thD23d5ra3S1HuaX5jRMTrtw/qGsP95xl8du4STgb5FHtdBw9cncllaiVUPKk+NQUT7RuK5LSKuRZ5SmeqVUpaqN2yNP7OF/8pjfbEL1DyJ+371P8hTSRBNJ6eX19gfQkqB1Sg6YddRiS60CdMsNpsk6EugzHdSl3TbehtO73TSTvMYzWI//4Q8l7DaH1yr92a1//d7H+PvWdOzD4PW1wQHP3DA2P6I+NDA/prMbRsXH9sPGxUcbFPTE5xR+bmpxgv1dMz/zgY/2cmaZdoWbn5hcg1ML83CzNUg3O4tLyCsdZlq0sLy3SLmPaWV1bWt/Y3Nreke0qjV3ZzvbW5sb6r7VV9nf+Act1zkL6BcopAAAAAElFTkSuQmCC" />
-            </svg>
-
+            <div class="relative mx-auto icon-fourth 2xl:mt-56px mt-41px 2sm:mt-34px 2sm:w-65px sm:w-65px">
+              <img src="img/icon-four-lightBlue.png" class="icon-animate icon-fourth-light absolute top-24px left-36% xl:left-37% lg:left-30% md:left-30% sm:left-3% 2sm:left-0 w-78px 2sm:w-62px sm:w-62px"
+                loading="lazy" alt="epcg">
+              <img src="img/icon-four-darkBlue.png"
+                class="absolute icon-animate icon-fourth-dark -top-15px left-141px xl:left-117px lg:left-74px md:left-74px sm:-top-4px sm:left-17px 2sm:-top-4px 2sm:left-17px w-44px sm:w-31px 2sm:w-31px" loading="lazy"
+                alt="epcg">
+            </div>
             <p
-              class="2xl:mt-60px mt-45px 2sm:mt-38px 2xl:w-224px 2xl:text-16px xl:max-w-179px xl:text-15px sm:max-w-179px 2sm:max-w-158px text-iconText lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
+              class="2xl:mt-133px mt-115px 2xl:w-224px 2xl:text-16px xl:max-w-179px xl:text-15px sm:max-w-179px 2sm:max-w-158px text-iconText lg:text-17px md:text-17px sm:text-16px 2sm:text-14px">
               Centar za kontakt s kupcima - 19100 - dostupan je svakog radnog
               dana od 08-20h.
             </p>
@@ -404,7 +422,7 @@
       <div
         class="mx-auto text-center px-30px 2xl:pt-120px 2xl:flex 2xl:mt-129px xl:pt-100px xl:flex xl:mt-120px lg:mt-100px md:mt-100px sm:mt-100px 2sm:mt-65px pb-50px 2xl:w-1417px xl:w-1157px lg:max-w-708px md:max-w-708px sm:max-w-541px 2sm:min-w-300px">
         <div
-          class="justify-between 2xl:mr-77px 2xl:text-left xl:mr-60px xl:text-left lg:flex md:flex sm:flex 2sm:flex pt-110px wow slideInLeft"
+          class="justify-between 2xl:mr-77px 2xl:text-left xl:mr-60px xl:text-left lg:flex md:flex sm:flex 2sm:flex pt-110px wow fadeInUp"
           data-wow-delay="0.3s ">
           <div>
             <h2
@@ -434,13 +452,14 @@
           </div>
         </div>
         <!-- Slider 2 -->
-        <div class="mx-auto 2xl:mt-5px xl:mt-5px owl-carousel slider2 owl-theme wow slideInRight"
-          data-wow-delay="0.3s ">
+        <div class="mx-auto 2xl:mt-5px xl:mt-5px owl-carousel slider2 owl-theme wow fadeIn"
+        data-wow-delay="0.6s ">
           <!-- Slider 2 - Item 1 -->
-          <div class="2xl:max-w-452px xl:max-w-452px sm:max-w-534px lg:max-w-708px md:max-w-708px item">
+          <div class="slider-two__item 2xl:max-w-452px xl:max-w-452px sm:max-w-534px lg:max-w-708px md:max-w-708px item wow fadeIn"
+          data-wow-delay="0.9s ">
             <div
-              class="bg-white hover:shadow-2xl 2xl:p-61px xl:p-61px lg:mt-60px lg:py-60px lg:px-40px md:py-60px md:mt-60px mt-47px md:px-40px sm:px-30px sm:py-50px 2sm:px-20px 2sm:py-35px">
-              <img class="mx-auto" src="img/slider2-img2.png " loading="lazy " alt="epcg " />
+              class="bg-white 2xl:p-61px xl:p-61px lg:mt-60px lg:py-60px lg:px-40px md:py-60px md:mt-60px mt-47px md:px-40px sm:px-30px sm:py-50px 2sm:px-20px 2sm:py-35px">
+              <img class="mx-auto slider-two__img" src="img/slider2-img2.png " loading="lazy " alt="epcg " />
               <p
                 class="text-buttonCover mt-63px 2xl:text-16px xl:text-16px lg:text-21px md:text-21px sm:text-19px 2sm:text-18px">
                 Ponedeljak, Jun 19, 2020
@@ -453,10 +472,11 @@
             </div>
           </div>
           <!-- Slider 2 - Item 2 -->
-          <div class="2xl:max-w-452px xl:max-w-452px sm:max-w-534px lg:max-w-708px md:max-w-708px item">
+          <div class="slider-two__item 2xl:max-w-452px xl:max-w-452px sm:max-w-534px lg:max-w-708px md:max-w-708px item wow fadeIn"
+          data-wow-delay="1.2s ">
             <div
-              class="bg-white hover:shadow-2xl 2xl:p-61px xl:p-61px lg:mt-60px lg:py-60px lg:px-40px md:py-60px md:mt-60px mt-47px md:px-40px sm:px-30px sm:py-50px 2sm:px-20px 2sm:py-35px">
-              <img class="mx-auto" src="img/slider2-img3.png " loading="lazy " alt="epcg " />
+              class="bg-white 2xl:p-61px xl:p-61px lg:mt-60px lg:py-60px lg:px-40px md:py-60px md:mt-60px mt-47px md:px-40px sm:px-30px sm:py-50px 2sm:px-20px 2sm:py-35px">
+              <img class="mx-auto slider-two__img" src="img/slider2-img3.png " loading="lazy " alt="epcg " />
               <p
                 class="text-buttonCover mt-63px 2xl:text-16px xl:text-16px lg:text-21px md:text-21px sm:text-19px 2sm:text-18px">
                 Srijeda, Jun 19, 2020
@@ -469,10 +489,11 @@
             </div>
           </div>
           <!-- Slider 2 - Item 3 -->
-          <div class="2xl:max-w-452px xl:max-w-452px sm:max-w-534px lg:max-w-708px md:max-w-708px item">
+          <div class="slider-two__item 2xl:max-w-452px xl:max-w-452px sm:max-w-534px lg:max-w-708px md:max-w-708px item wow fadeIn"
+          data-wow-delay="0.6s ">
             <div
-              class="bg-white hover:shadow-2xl 2xl:p-61px xl:p-61px lg:mt-60px lg:py-60px lg:px-40px md:py-60px md:mt-60px mt-47px md:px-40px sm:px-30px sm:py-50px 2sm:px-20px 2sm:py-35px">
-              <img class="mx-auto" src="img/slider2-img.png " loading="lazy " alt="epcg " />
+              class="bg-white 2xl:p-61px xl:p-61px lg:mt-60px lg:py-60px lg:px-40px md:py-60px md:mt-60px mt-47px md:px-40px sm:px-30px sm:py-50px 2sm:px-20px 2sm:py-35px">
+              <img class="mx-auto slider-two__img" src="img/slider2-img.png " loading="lazy " alt="epcg " />
               <p
                 class="text-buttonCover mt-63px 2xl:text-16px xl:text-16px lg:text-21px md:text-21px sm:text-19px 2sm:text-18px">
                 Petak, Jun 19, 2020
@@ -488,7 +509,7 @@
       </div>
       <!-- Aplication section in section 3 -->
       <section
-        class="mx-auto bg-center bg-no-repeat 2xl:h-530px 2xl:bg-auto xl:h-431px xl:bg-auto lg:bg-right-bottom lg:bg-cover md:bg-right-bottom md:bg-cover 2xl:max-w-1700px xl:max-w-1417px sm:max-w-541px lg:max-w-708px md:max-w-708px 2xl:mt-161px xl:mt-252px mt-50px bg-sectionFourCover 2xl:bg-sectionFourCoverDesktop xl:bg-sectionFourCoverDesktop lg:bg-sectionFourCoverTablet md:bg-sectionFourCoverTablet px-20px mb-100px wow slideInLeft"
+        class="mx-auto transition duration-500 ease-in-out transform bg-center bg-no-repeat group 2xl:hover:bg-sectionFourCoverDesktopCover xl:hover:bg-sectionFourCoverDesktopCover 2xl:h-530px 2xl:bg-auto xl:h-431px xl:bg-auto lg:bg-right-bottom lg:bg-cover md:bg-right-bottom md:bg-cover 2xl:max-w-1700px xl:max-w-1417px sm:max-w-541px lg:max-w-708px md:max-w-708px 2xl:mt-161px xl:mt-252px mt-50px bg-sectionFourCover 2xl:bg-sectionFourCoverDesktop xl:bg-sectionFourCoverDesktop lg:bg-sectionFourCoverTablet md:bg-sectionFourCoverTablet px-20px mb-100px wow slideInLeft"
         data-wow-delay="0.2s ">
         <div
           class="text-center 2xl:ml-150px 2xl:flex 2xl:text-left xl:ml-50px xl:flex xl:text-left lg:pt-104px md:pt-104px sm:pt-104px 2sm:pt-70px sm:px-40px 2sm:px-30px">
@@ -501,7 +522,7 @@
               Ovdje mozete
             </p>
             <h2
-              class="hidden underline 2xl:block xl:block font-robotoBlack text-52px w-200px xl:text-45px text-headerBlue">
+              class="hidden underline 2xl:group-hover:text-white 2xl:block xl:block font-robotoBlack text-52px w-200px xl:text-45px text-headerBlue">
               Preuzeti Aplikaciju
             </h2>
           </div>
@@ -511,7 +532,7 @@
               class="text-headerBlue font-roboto 2xl:hidden xl:hidden lg:w-365px lg:text-22px md:w-365px md:text-22px sm:text-19px 2sm:text-17px lg:mt-30px md:mt-30px mt-21px">
               Preuzmite aplikaciju ovdje i sa vašeg telefona obavljajte..
             </p>
-            <p class="hidden text-headerBlue font-roboto 2xl:block xl:block text-20px xl:text-18px w-290px">
+            <p class="hidden 2xl:group-hover:text-white text-headerBlue font-roboto 2xl:block xl:block text-20px xl:text-18px w-290px">
               Preuzmite aplikaciju ovdje i sa vašeg telefona obavljajte, lorem
               ispum dolor sit amet.
             </p>
@@ -537,7 +558,7 @@
             src="img/section4-img-tablet.png " loading="lazy " alt="epcg " />
           <img class="mx-auto 2xl:hidden xl:hidden lg:hidden md:hidden sm:mt-20px 2sm:mt-30px"
             src="img/section4-img.png " loading="lazy " alt="epcg " />
-          <div class="2xl:ml-147px 2xl:-mt-34px 2xl:order-2 2xl:min-w-574px xl:min-w-475px xl:-mt-34px wow fadeInDown"
+          <div class=" 2xl:ml-147px 2xl:-mt-34px 2xl:order-2 2xl:min-w-574px xl:min-w-475px xl:-mt-34px wow fadeInDown"
             data-wow-delay="1.2s ">
             <img class="hidden mx-auto 2xl:block xl:block" src="img/section4-img-desktop.png " loading="lazy "
               alt="epcg " />
@@ -573,7 +594,7 @@
         <div class="mx-auto owl-carousel slider3 owl-theme wow fadeInRight" data-wow-delay="0.2s ">
           <!-- Slider 3 - Item 1 -->
           <div
-            class="2xl:overflow-x-hidden 2xl:max-w-687px xl:overflow-x-hidden max-w-541px lg:max-w-708px md:max-w-708px item">
+            class="overflow-hidden group 2xl:max-w-687px xl:overflow-x-hidden max-w-541px lg:max-w-708px md:max-w-708px item">
             <div
               class="bg-sliderThreeCover hover:shadow-2xl 2xl:mt-75px xl:mt-80px lg:mt-102px md:mt-102px sm:mt-150px 2xl:pt-49px 2xl:pl-46px xl:pt-49px xl:pl-46px lg:pl-30px lg:pt-30px md:pl-30px md:pt-30px sm:pl-30px sm:pt-30px 2sm:mt-50px 2sm:pl-15px 2sm:pt-25px wow slideInLeft"
               data-wow-delay="0.4s ">
@@ -598,14 +619,14 @@
                 <div
                   class="absolute bottom-0 z-10 2xl:-right-10px -right-50px lg:-right-28px md:-right-28px 2sm:w-252px xl:w-300px wow slideInRight"
                   data-wow-delay="0.8s ">
-                  <img class="" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
+                  <img class="transition duration-500 ease-in-out transform group-hover:scale-110" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
                 </div>
               </div>
             </div>
           </div>
           <!-- Slider 3 - Item 2 -->
           <div
-            class="slider3-animation 2xl:overflow-x-hidden xl:overflow-x-hidden 2xl:max-w-687px max-w-541px lg:max-w-708px md:max-w-708px item">
+            class="overflow-hidden slider3-animation group xl:overflow-x-hidden 2xl:max-w-687px max-w-541px lg:max-w-708px md:max-w-708px item">
             <div
               class="bg-sliderThreeCover hover:shadow-2xl 2xl:mt-75px xl:mt-80px lg:mt-102px md:mt-102px sm:mt-150px 2xl:pt-49px 2xl:pl-46px xl:pt-49px xl:pl-46px lg:pl-30px lg:pt-30px md:pl-30px md:pt-30px sm:pl-30px sm:pt-30px 2sm:mt-50px 2sm:pl-15px 2sm:pt-25px wow slideInLeft"
               data-wow-delay="0.4s ">
@@ -630,14 +651,14 @@
                 <div
                   class="absolute bottom-0 z-10 2xl:-right-10px -right-50px lg:-right-28px md:-right-28px xl:w-300px 2sm:w-252px wow slideInRight"
                   data-wow-delay="0.8s ">
-                  <img class="" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
+                  <img class="transition duration-500 ease-in-out transform group-hover:scale-110" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
                 </div>
               </div>
             </div>
           </div>
           <!-- Slider 3 - Item 3 -->
           <div
-            class="2xl:overflow-x-hidden 2xl:max-w-687px xl:overflow-x-hidden max-w-541px lg:max-w-708px md:max-w-708px item">
+            class="overflow-hidden group 2xl:max-w-687px xl:overflow-x-hidden max-w-541px lg:max-w-708px md:max-w-708px item">
             <div
               class="bg-sliderThreeCover hover:shadow-2xl 2xl:mt-75px xl:mt-80px lg:mt-102px md:mt-102px sm:mt-150px 2xl:pt-49px 2xl:pl-46px xl:pt-49px xl:pl-46px lg:pl-30px lg:pt-30px md:pl-30px md:pt-30px sm:pl-30px sm:pt-30px 2sm:mt-50px 2sm:pl-15px 2sm:pt-25px">
               <div class="relative">
@@ -659,14 +680,14 @@
                 </div>
                 <div
                   class="absolute bottom-0 z-10 2xl:-right-10px -right-50px lg:-right-28px md:-right-28px 2sm:w-252px xl:w-300px wow slideInRight">
-                  <img class="" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
+                  <img class="transition duration-500 ease-in-out transform group-hover:scale-110" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
                 </div>
               </div>
             </div>
           </div>
           <!-- Slider 3 - Item 4 -->
           <div
-            class="slider3-animation 2xl:overflow-x-hidden xl:overflow-x-hidden 2xl:max-w-687px max-w-541px lg:max-w-708px md:max-w-708px item">
+            class="overflow-hidden slider3-animation group xl:overflow-x-hidden 2xl:max-w-687px max-w-541px lg:max-w-708px md:max-w-708px item">
             <div
               class="bg-sliderThreeCover hover:shadow-2xl 2xl:mt-75px xl:mt-80px lg:mt-102px md:mt-102px sm:mt-150px 2xl:pt-49px 2xl:pl-46px xl:pt-49px xl:pl-46px lg:pl-30px lg:pt-30px md:pl-30px md:pt-30px sm:pl-30px sm:pt-30px 2sm:mt-50px 2sm:pl-15px 2sm:pt-25px">
               <div class="relative">
@@ -688,14 +709,14 @@
                 </div>
                 <div
                   class="absolute bottom-0 z-10 2xl:-right-10px -right-50px lg:-right-28px md:-right-28px xl:w-300px 2sm:w-252px">
-                  <img class="" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
+                  <img class="transition duration-500 ease-in-out transform group-hover:scale-110" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
                 </div>
               </div>
             </div>
           </div>
           <!-- Slider 3 - Item 5 -->
           <div
-            class="2xl:overflow-x-hidden 2xl:max-w-687px xl:overflow-x-hidden max-w-541px lg:max-w-708px md:max-w-708px item">
+            class="overflow-hidden group 2xl:max-w-687px xl:overflow-x-hidden max-w-541px lg:max-w-708px md:max-w-708px item">
             <div
               class="bg-sliderThreeCover hover:shadow-2xl 2xl:mt-75px xl:mt-80px lg:mt-102px md:mt-102px sm:mt-150px 2xl:pt-49px 2xl:pl-46px xl:pt-49px xl:pl-46px lg:pl-30px lg:pt-30px md:pl-30px md:pt-30px sm:pl-30px sm:pt-30px 2sm:mt-50px 2sm:pl-15px 2sm:pt-25px">
               <div class="relative">
@@ -717,14 +738,14 @@
                 </div>
                 <div
                   class="absolute bottom-0 z-10 2xl:-right-10px -right-50px lg:-right-28px md:-right-28px 2sm:w-252px xl:w-300px wow slideInRight">
-                  <img class="" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
+                  <img class="transition duration-500 ease-in-out transform group-hover:scale-110" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
                 </div>
               </div>
             </div>
           </div>
           <!-- Slider 3 - Item 6 -->
           <div
-            class="slider3-animation 2xl:overflow-x-hidden xl:overflow-x-hidden 2xl:max-w-687px max-w-541px lg:max-w-708px md:max-w-708px item">
+            class="overflow-hidden slider3-animation group xl:overflow-x-hidden 2xl:max-w-687px max-w-541px lg:max-w-708px md:max-w-708px item">
             <div
               class="bg-sliderThreeCover hover:shadow-2xl 2xl:mt-75px xl:mt-80px lg:mt-102px md:mt-102px sm:mt-150px 2xl:pt-49px 2xl:pl-46px xl:pt-49px xl:pl-46px lg:pl-30px lg:pt-30px md:pl-30px md:pt-30px sm:pl-30px sm:pt-30px 2sm:mt-50px 2sm:pl-15px 2sm:pt-25px">
               <div class="relative">
@@ -746,7 +767,7 @@
                 </div>
                 <div
                   class="absolute bottom-0 z-10 2xl:-right-10px -right-50px lg:-right-28px md:-right-28px xl:w-300px 2sm:w-252px">
-                  <img class="" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
+                  <img class="transition duration-500 ease-in-out transform group-hover:scale-110" src="img/slider3-shape.png " loading="lazy " alt="epcg " />
                 </div>
               </div>
             </div>
@@ -791,11 +812,11 @@
             <h3 class="font-robotoMedium text-14px lg:text-19px md:text-19px sm:text-16px 2sm:text-15px text-faqText">
               Akcija
             </h3>
-            <p class="font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px text-faqQuestion">
+            <p class="question_1 questionUnderline font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px text-faqQuestion">
               Da li akcija 5za5 važi za domaćinstva?
             </p>
           </div>
-          <div class="my-auto">
+          <div class="my-auto plus-hover">
             <div id="faq_1" class="cursor-pointer circle-plus closed">
               <div class="circle">
                 <div class="horizontal"></div>
@@ -825,7 +846,7 @@
             <h3 class="font-robotoMedium text-14px lg:text-19px md:text-19px sm:text-16px 2sm:text-15px text-faqText">
               Zlatni tim
             </h3>
-            <p class="font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px text-faqQuestion">
+            <p class="question_2 questionUnderline font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px text-faqQuestion">
               Kako saznati dobitnike nagradne igre?
             </p>
           </div>
@@ -860,7 +881,7 @@
               Nova brojila
             </h3>
             <p
-              class="font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px xl:w-550px lg:w-457px md:w-457px sm:w-369px text-faqQuestion">
+              class="question_3 questionUnderline font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px xl:w-550px lg:w-457px md:w-457px sm:w-369px text-faqQuestion">
               Molim da mi odgovorite kad je u planu ugradnja novih brojila u
               Petrovcu obala 66?
             </p>
@@ -896,7 +917,7 @@
               Račun putem sms-a i email-a
             </h3>
             <p
-              class="font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px xl:w-550px lg:w-457px md:w-457px sm:w-369px text-faqQuestion">
+              class="question_4 questionUnderline font-robotoBlack text-20px lg:text-24px md:text-24px sm:text-21px 2sm:text-19px xl:w-550px lg:w-457px md:w-457px sm:w-369px text-faqQuestion">
               Da li iz Srbije mogu platiti račun za energiju? Ako mogu, koji
               je način?
             </p>
