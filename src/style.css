@@ -102,7 +102,7 @@
 /* Buttons on hover */
 .hover-thick-4 {
   background:
-    linear-gradient(#0e477f 0 0) left  /var(--d, 0%) 100% no-repeat,
+    linear-gradient(#0e477f 0 0) left /var(--d, 0%) 100% no-repeat,
     linear-gradient(#0e477f 0 0) right /var(--d, 0%) 100% no-repeat;
   transition: 0.7s;
 }
@@ -171,7 +171,7 @@
   }
 
   /* Show underline on hover */
-  .slider2 .slider-two__item:hover h3{
+  .slider2 .slider-two__item:hover h3 {
     text-decoration: underline;
   }
 
@@ -356,6 +356,12 @@
 
 @media (min-width: 320px) and (max-width: 1279px) {
 
+  /* Owl dots position for smaller screens */
+  .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 0 !important;
+    padding-top: 10px;
+  }
+
   /* Position for slider 1 dots */
   .slider1 .owl-dots {
     background-color: white;
@@ -395,12 +401,12 @@
   }
 }
 
-@media screen and (min-width: 1536px){
+@media screen and (min-width: 1536px) {
   .questionUnderline {
     position: relative;
     text-decoration: none;
   }
-  
+
   .questionUnderline::after {
     border-radius: 1em;
     border-top: 0.1em solid #2f56b0;
@@ -411,11 +417,11 @@
     left: 0;
     transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
   }
-  
+
   .questionUnderline.underlineHover::after {
     right: 0;
   }
-  
+
   .questionUnderline.toggleUnderline:after {
     right: 0;
   }
