@@ -10,7 +10,6 @@ module.exports = {
         //     fontFace: true,
         // }
     },
-
     darkMode: 'media', // or 'media' or 'class'
     theme: {
         extend: {
@@ -206,6 +205,7 @@ module.exports = {
                 '180px': '180px',
                 '183px': '183px',
                 '184px': '184px',
+                '185px': '185px',
                 '187px': '187px',
                 '188px': '188px',
                 '189px': '189px',
@@ -285,8 +285,10 @@ module.exports = {
                 '306px': '306px',
                 '310px': '310px',
                 '316px': '316px',
+                '318px': '318px',
                 '319px': '319px',
                 '321px': '321px',
+                '324px': '324px',
                 '329px': '329px',
                 '335px': '335px',
                 '338px': '338px',
@@ -325,6 +327,7 @@ module.exports = {
                 '459px': '459px',
                 '463px': '463px',
                 '460px': '460px',
+                '467px': '467px',
                 '468px': '468px',
                 '470px': '470px',
                 '479px': '479px',
@@ -429,6 +432,7 @@ module.exports = {
                 '1746px': '1746px',
             },
             fontSize: { //custom fontSize
+                '7px': '7px',
                 '8px': '8px',
                 '11px': '11px',
                 '12px': '12px',
@@ -483,6 +487,7 @@ module.exports = {
                 '10px': '10px',
                 '12px': '12px',
                 '13px': '13px',
+                '15px': '15px',
                 '17px': '17px',
                 '18px': '18px',
                 '20px': '20px',
@@ -544,6 +549,14 @@ module.exports = {
                 '6px': '6px',
             },
             screens: { //custom breakpoints
+                '4sm': {
+                    'min': '320px',
+                    'max': '470px',
+                },
+                '3sm': {
+                    'min': '470px',
+                    'max': '547px',
+                },
                 '2sm': {
                     'min': '320px',
                     'max': '546px'
@@ -574,6 +587,7 @@ module.exports = {
                 '2%': '2%',
                 '3%': '3%',
                 '6%': '6%',
+                '15%': '15%',
                 '16%': '16%',
                 '17%': '17%',
                 '22%': '22%',
@@ -593,8 +607,11 @@ module.exports = {
                 '45%': '45%',
                 '50%': '50%',
                 '52%': '52%',
+                '55%': '55%',
                 '57%': '57%',
                 '59%': '59%',
+                '60%': '60%',
+                '62%': '62%',
             },
             minWidth: { //custom minWidth
                 '174px': '174px',
@@ -627,13 +644,16 @@ module.exports = {
                 '271px': '271px',
                 '300px': '300px',
                 '320px': '320px',
+                '330px': '330px',
                 '357px': '357px',
                 '360px': '360px',
                 '363px': '363px',
+                '387px': '387px',
                 '400px': '400px',
                 '434px': '434px',
                 '452px': '452px',
                 '460px': '460px',
+                '464px': '464px',
                 '480px': '480px',
                 '500px': '500px',
                 '525px': '525px',
