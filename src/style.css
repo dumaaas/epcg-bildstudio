@@ -789,7 +789,7 @@
     }
 
     .change .bar1 {
-      @apply transform -rotate-45 -translate-x-8px w-30px translate-y-13px;
+      @apply transform -rotate-45 -translate-x-8px w-30px translate-y-12px;
     }
 
     .change .bar2 {
