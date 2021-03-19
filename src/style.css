@@ -158,6 +158,12 @@
     opacity: 0.4;
   }
 
+  /* Show underline on hover */
+  .slider2 .slider-two__item:hover h3{
+    text-decoration: underline;
+  }
+
+  /* Dont show underline for non active slides */
   .slider2 .owl-item.active h3 {
     text-decoration: none !important;
   }
