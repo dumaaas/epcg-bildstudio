@@ -12,7 +12,7 @@
 /* Active link in header */
 
 .headerLink {
-  color: #6ca0d3 !important;
+  color: #7c9fc2 !important;
   font-size: 19px;
   position: relative;
   transition: width 0.3s;
@@ -28,6 +28,23 @@
   width: 0%;
   content: "";
   transition: width 0.3s;
+}
+
+/* Active link in header - desktop vesion */
+/* underline is above link */
+
+@media (min-width: 1280px) {
+  .headerLink::before {
+    --tw-bg-opacity: 1;
+    background-color: #1ab7ea;
+    height: 3px;
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    width: 0%;
+    content: "";
+    transition: width 0.3s;
+  }
 }
 
 .headerLink.activeHeader::before {
@@ -271,30 +288,6 @@
   opacity: 0;
 }
 
-.questionUnderline {
-  position: relative;
-  text-decoration: none;
-}
-
-.questionUnderline::after {
-  border-radius: 1em;
-  border-top: 0.1em solid #2f56b0;
-  content: "";
-  position: absolute;
-  right: 100%;
-  bottom: 0.14em;
-  left: 0;
-  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
-}
-
-.questionUnderline.underlineHover::after {
-  right: 0;
-}
-
-.questionUnderline.toggleUnderline:after {
-  right: 0;
-}
-
 .circle-plus {
   height: 4em;
   width: 4em;
@@ -338,6 +331,7 @@
   }
 }
 
+
 @media (min-width: 320px) and (max-width: 1279px) {
 
   /* Position for slider 1 dots */
@@ -376,6 +370,32 @@
 
   .owl-nav .owl-prev img {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1536px){
+  .questionUnderline {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .questionUnderline::after {
+    border-radius: 1em;
+    border-top: 0.1em solid #2f56b0;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: 0.14em;
+    left: 0;
+    transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
+  }
+  
+  .questionUnderline.underlineHover::after {
+    right: 0;
+  }
+  
+  .questionUnderline.toggleUnderline:after {
+    right: 0;
   }
 }
 
@@ -625,6 +645,15 @@
 
 .slider-two__item:hover .slider-two__img {
   transform: scale(1.05);
+}
+
+/* SHOW TEXT IN CARDS ON HOVER */
+.special .specialDiv{
+  transition: all 1s ease-in-out;
+}
+
+.special:hover .specialDiv {
+  display: block;
 }
 
 @tailwind base;
