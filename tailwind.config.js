@@ -16,7 +16,7 @@ module.exports = {
         extend: {
             colors: { //custom colors
                 headerBlue: "#0e477f",
-                headerLink: "#7c9fc2",
+                headerLink: "#6ca0d3",
                 iconText: "#8c8c8c",
                 coverColor: "#e8f9ff",
                 sliderThreeCover: "#f4f4f4",
