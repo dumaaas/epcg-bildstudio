@@ -619,6 +619,15 @@
   transform: scale(1.05);
 }
 
+/* SHOW TEXT IN CARDS ON HOVER */
+.special .specialDiv{
+  transition: all 1s ease-in-out;
+}
+
+.special:hover .specialDiv {
+  display: block;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
