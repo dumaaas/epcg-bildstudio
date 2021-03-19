@@ -16,7 +16,7 @@ module.exports = {
         extend: {
             colors: { //custom colors
                 headerBlue: "#0e477f",
-                headerLink: "#7c9fc2",
+                headerLink: "#6ca0d3",
                 iconText: "#8c8c8c",
                 coverColor: "#e8f9ff",
                 sliderThreeCover: "#f4f4f4",
@@ -345,6 +345,7 @@ module.exports = {
                 '548px': '548px',
                 '550px': '550px',
                 '555px': '555px',
+                '559px': '559px',
                 '560px': '560px',
                 '562px': '562px',
                 '564px': '564px',

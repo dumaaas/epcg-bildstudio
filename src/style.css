@@ -145,7 +145,7 @@
     display: flex;
     position: absolute;
     bottom: 2%;
-    left: 25%;
+    left: 27%;
   }
 
   /* Slider dots color and border */
@@ -206,7 +206,7 @@
     top: -18% !important;
     right: 9% !important;
     position: absolute !important;
-    border: solid 2px #e4e4e5 !important;
+    border: solid 1px #e4e4e5 !important;
   }
 }
 
@@ -216,7 +216,7 @@
   .slider2 .owl-nav .owl-next {
     background-color: white !important;
     right: 64% !important;
-    border: solid 2px #e4e4e5 !important;
+    border: solid 1px #e4e4e5 !important;
   }
 }
 
@@ -269,8 +269,9 @@
 /* Slider active button on focus */
 
 .owl-nav button:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  outline: none;
+  /* outline: 2px solid transparent;
+  outline-offset: 2px; */
 }
 
 /* +/- manipulation FAQ section */
@@ -395,12 +396,12 @@
   }
 }
 
-@media screen and (min-width: 1536px){
+@media screen and (min-width: 1536px) {
   .questionUnderline {
     position: relative;
     text-decoration: none;
   }
-  
+
   .questionUnderline::after {
     border-radius: 1em;
     border-top: 0.1em solid #2f56b0;
@@ -411,11 +412,11 @@
     left: 0;
     transition: right 0.4s cubic-bezier(0, 0.5, 0, 1);
   }
-  
+
   .questionUnderline.underlineHover::after {
     right: 0;
   }
-  
+
   .questionUnderline.toggleUnderline:after {
     right: 0;
   }
@@ -433,12 +434,12 @@
 
 .owl-nav .owl-next:hover {
   transition: all 0.5s ease-in-out;
-  background-color: #0e477f !important;
+  background-color: #1ab7ea !important;
 }
 
 .owl-nav .owl-prev:hover {
   transition: all 0.5s ease-in-out;
-  background-color: #0e477f !important;
+  background-color: #1ab7ea !important;
 }
 
 .slider3 .owl-nav .owl-next {
@@ -450,7 +451,7 @@
 }
 
 .slider3 .owl-nav .owl-next:hover {
-  background-color: #0e477f !important;
+  background-color: #1ab7ea !important;
 }
 
 /* Animations*/
@@ -669,6 +670,14 @@
   transform: scale(1.05);
 }
 
+<<<<<<< HEAD
+/* SHOW TEXT IN CARDS ON HOVER */
+.special .specialDiv {
+  transition: all 1s ease-in-out;
+}
+
+=======
+>>>>>>> 57ab9bdfab37c8486cdadd9d5dc46d9b1db23310
 .special:hover .specialDiv {
   visibility: visible;
 }
