@@ -99,6 +99,18 @@
   color: black;
 }
 
+/* Buttons on hover */
+.hover-thick-4 {
+  background:
+    linear-gradient(#0e477f 0 0) left  /var(--d, 0%) 100% no-repeat,
+    linear-gradient(#0e477f 0 0) right /var(--d, 0%) 100% no-repeat;
+  transition: 0.7s;
+}
+
+.hover-thick-4:hover {
+  --d: 100%;
+}
+
 /* Transition on slider 1 shape */
 
 .slider-shape {
