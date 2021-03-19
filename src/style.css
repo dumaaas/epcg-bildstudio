@@ -12,7 +12,7 @@
 /* Active link in header */
 
 .headerLink {
-  color: #6ca0d3 !important;
+  color: #7c9fc2 !important;
   font-size: 19px;
   position: relative;
   transition: width 0.3s;
@@ -28,6 +28,23 @@
   width: 0%;
   content: "";
   transition: width 0.3s;
+}
+
+/* Active link in header - desktop vesion */
+/* underline is above link */
+
+@media (min-width: 1280px) {
+  .headerLink::before {
+    --tw-bg-opacity: 1;
+    background-color: #1ab7ea;
+    height: 3px;
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    width: 0%;
+    content: "";
+    transition: width 0.3s;
+  }
 }
 
 .headerLink.activeHeader::before {
