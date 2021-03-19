@@ -26,21 +26,6 @@ $(document).ready(function () {
             $(this).addClass("activeHeader");
         });
 
-        //hiding navigation and showing search input and reverse
-        $("#search").click(function () {
-            // remove classes from all
-            if ($("#input-search").hasClass("hidden")) {
-                setTimeout(function () {
-                    $("#input-search").removeClass("hidden");
-                    $("#input-search").addClass("animate__animated");
-                }, 400);
-            } else {
-                $("#input-search").addClass("animate__slideInDown");
-                $("#input-search").addClass("hidden");
-            }
-            $(".nav-link").slideToggle();
-        });
-
         //adding/removing active class from navigation links
         $(".navigation a").click(function () {
             // remove classes from all
