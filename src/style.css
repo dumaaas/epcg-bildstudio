@@ -99,6 +99,18 @@
   color: black;
 }
 
+/* Buttons on hover */
+.hover-thick-4 {
+  background:
+    linear-gradient(#0e477f 0 0) left  /var(--d, 0%) 100% no-repeat,
+    linear-gradient(#0e477f 0 0) right /var(--d, 0%) 100% no-repeat;
+  transition: 0.7s;
+}
+
+.hover-thick-4:hover {
+  --d: 100%;
+}
+
 /* Transition on slider 1 shape */
 
 .slider-shape {
@@ -156,6 +168,16 @@
   /* Slider 2 opacity for active items */
   .slider2 .owl-item.active {
     opacity: 0.4;
+  }
+
+  /* Show underline on hover */
+  .slider2 .slider-two__item:hover h3{
+    text-decoration: underline;
+  }
+
+  /* Dont show underline for non active slides */
+  .slider2 .owl-item.active h3 {
+    text-decoration: none !important;
   }
 
   /* Slider 3 dots position */
@@ -648,13 +670,16 @@
   transform: scale(1.05);
 }
 
+<<<<<<< HEAD
 /* SHOW TEXT IN CARDS ON HOVER */
 .special .specialDiv {
   transition: all 1s ease-in-out;
 }
 
+=======
+>>>>>>> 57ab9bdfab37c8486cdadd9d5dc46d9b1db23310
 .special:hover .specialDiv {
-  display: block;
+  visibility: visible;
 }
 
 @tailwind base;
