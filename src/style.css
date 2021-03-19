@@ -156,6 +156,10 @@
     opacity: 0.4;
   }
 
+  .slider2 .owl-item.active h3 {
+    text-decoration: none !important;
+  }
+
   /* Slider 3 dots position */
   .slider3 .owl-dots {
     position: absolute;
