@@ -208,6 +208,11 @@
     position: absolute !important;
     border: solid 1px #e4e4e5 !important;
   }
+
+  ::placeholder {
+    color: white !important;
+    font-size: 14px !important;
+  }
 }
 
 @media (min-width: 1536px) {
@@ -218,6 +223,7 @@
     right: 64% !important;
     border: solid 1px #e4e4e5 !important;
   }
+
 }
 
 /* Slider dot on hover */
