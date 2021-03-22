@@ -62,19 +62,19 @@ $(document).ready(function () {
     });
 
     //show answer when we click + and replace + with -
-    $(".circle-plus").click(function () {
+    $(".openDiv").click(function () {
         var num = this.id.match(/\d+/)[0];
         $("#faq_" + num).toggleClass('opened');
         $("#answer_" + num).slideToggle();
         $(".question_" + num).toggleClass('toggleUnderline');
     });
 
-    $('.circle-plus').mouseover(function () {
+    $('.openDiv').mouseover(function () {
         var num = this.id.match(/\d+/)[0];
         $('.question_' + num).addClass('underlineHover');
     });
 
-    $('.circle-plus').mouseout(function () {
+    $('.openDiv').mouseout(function () {
         var num = this.id.match(/\d+/)[0];
         $('.question_' + num).removeClass('underlineHover');
     });
