@@ -106,6 +106,48 @@ $(document).ready(function () {
         });
     });
 
+
+
+    //animacije za slajder - PROBA
+    var effectsSlide = 'animated slideInLeft slider-delay-1s';
+    var effectsSlide2 = 'animated slideInLeft slider-delay-3s';
+    var effectsSlide3 = 'animated slideInLeft slider-delay-5s';
+    var effectsSlide4 = 'animated slideInLeft slider-delay-7s';
+    var effectsEnd =
+    'animationEnd oAnimationEnd mozAnimationEnd webkitAnimationEnd';
+    var owl = $('.slider3');
+    // Listen to owl events:
+    owl.on('changed.owl.carousel', function (event) {
+        $('.itemSelf')
+        .addClass(effectsSlide)
+        .one(effectsEnd, function () {
+            $('.itemSelf').removeClass(effectsSlide);
+        });
+    });
+    owl.on('changed.owl.carousel', function (event) {
+        $('.itemSelf2')
+        .addClass(effectsSlide2)
+        .one(effectsEnd, function () {
+            $('.itemSelf2').removeClass(effectsSlide2);
+        });
+    });
+    owl.on('changed.owl.carousel', function (event) {
+        $('.itemSelf3')
+        .addClass(effectsSlide3)
+        .one(effectsEnd, function () {
+            $('.itemSelf3').removeClass(effectsSlide3);
+        });
+    });
+    owl.on('changed.owl.carousel', function (event) {
+        $('.itemSelf4')
+        .addClass(effectsSlide4)
+        .one(effectsEnd, function () {
+            $('.itemSelf4').removeClass(effectsSlide4);
+        });
+    });
+    
+
+
     //slider1
     $('.slider1').owlCarousel({
         loop: true,
