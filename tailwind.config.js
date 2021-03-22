@@ -439,6 +439,8 @@ module.exports = {
             fontSize: { //custom fontSize
                 '7px': '7px',
                 '8px': '8px',
+                '9px': '9px',
+                '10px': '10px',
                 '11px': '11px',
                 '12px': '12px',
                 '13px': '13px',
@@ -489,10 +491,13 @@ module.exports = {
             },
             lineHeight: { //custom lineHeight
                 '1.571': '1.571',
+                '9px': '9px',
                 '10px': '10px',
                 '12px': '12px',
                 '13px': '13px',
+                '14px': '14px',
                 '15px': '15px',
+                '16px': '16px',
                 '17px': '17px',
                 '18px': '18px',
                 '20px': '20px',
@@ -685,11 +690,12 @@ module.exports = {
                 '963px': '963px',
                 '1157px': '1157px',
                 '1417px': '1147px',
-                '1417pxx':'1417px',
+                '1417pxx': '1417px',
                 '1700px': '1700px',
 
             },
             borderWidth: { //custom borderWidths
+                '1': '1px',
                 '3': '3px',
                 '4': '4px',
                 '12': '12px',
