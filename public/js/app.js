@@ -66,17 +66,17 @@ $(document).ready(function () {
         var num = this.id.match(/\d+/)[0];
         $("#faq_" + num).toggleClass('opened');
         $("#answer_" + num).slideToggle();
-        $(".question_"+ num).toggleClass('toggleUnderline');
+        $(".question_" + num).toggleClass('toggleUnderline');
     });
 
-    $('.circle-plus').mouseover(function() {
+    $('.circle-plus').mouseover(function () {
         var num = this.id.match(/\d+/)[0];
-        $('.question_'+ num).addClass('underlineHover');
-    }); 
+        $('.question_' + num).addClass('underlineHover');
+    });
 
-    $('.circle-plus').mouseout(function() {
+    $('.circle-plus').mouseout(function () {
         var num = this.id.match(/\d+/)[0];
-        $('.question_'+ num).removeClass('underlineHover');
+        $('.question_' + num).removeClass('underlineHover');
     });
 
     //Go through each carousel on the page
