@@ -503,6 +503,31 @@
 
 /* Animations*/
 
+/* Animations - slider 1 */
+.slider-delay-1s {
+  animation-delay: 1s !important;
+}
+
+.slider-delay-1_2s {
+  animation-delay: 1.2s !important;
+}
+
+.slider-delay-1_4s {
+  animation-delay: 1.4s !important;
+}
+
+.slider-delay-1_5s {
+  animation-delay: 1.5s !important;
+}
+
+.slider-delay-2s {
+  animation-delay: 2s !important;
+}
+
+.slider-duration-1_7s {
+  animation-duration: 1.7s !important;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 1;
