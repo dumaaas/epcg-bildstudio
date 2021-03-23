@@ -535,45 +535,54 @@
   }
 }
 
-@-webkit-keyframes slideOutIn {
-  0% {
-    transform: translateX(0%);
+@keyframes movesUp{
+  0%{
+    transform: translateY(0%);
   }
-
-  50% {
-    transform: translateX(-250%);
-    opacity: 0;
+  50%{
+    transform: translateY(-150%);
   }
-
-  51% {
-    transform: translateX(250%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
+   100%{
+    transform: translateY(0%);
   }
 }
 
-@keyframes slideOutIn {
-  0% {
-    transform: translateX(0%);
+@-webkit-keyframes movesUp{
+  0%{
+    transform: translateY(0%);
   }
-
-  50% {
-    transform: translateX(-250%);
-    opacity: 0;
+  50%{
+    transform: translateY(-150%);
   }
-
-  51% {
-    transform: translateX(250%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0%);
+   100%{
+    transform: translateY(0%);
   }
 }
+
+@keyframes bounceSide{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(32%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes  bounceSide{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(32%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
 
 @keyframes slideOutInTop {
   0% {
@@ -812,7 +821,7 @@
 
 
 .icon-animate {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-delay: 0.5s;
 }
 
@@ -828,13 +837,14 @@
 }
 
 .icon-first:hover .icon-first-light {
-  -webkit-animation-name: slideOutIn;
-  animation-name: slideOutIn;
+  -webkit-animation-name: bounceSide;
+  animation-name: bounceSide;
+  animation-delay: 1s;
 }
 
 .icon-first:hover .icon-first-dark {
-  -webkit-animation-name: fade;
-  animation-name: fade;
+   -webkit-animation-name: movesUp;
+  animation-name: movesUp;
 }
 
 .icon-second:hover .icon-second-animate {
