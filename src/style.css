@@ -158,7 +158,6 @@
   .slider2 .owl-nav .owl-next {
     background-color: white !important;
     right: 60% !important;
-    border: solid 1px #e4e4e5 !important;
   }
 
   /* .slider2 .owl-nav .owl-next:hover .slider-nav{
@@ -193,6 +192,7 @@
     background-color: #1ab7ea !important;
     right: 0% !important;
     top: -18% !important;
+    border: solid 1px #e4e4e5 !important;
   }
 
   /* Slider 3 prev button position and color */
@@ -213,18 +213,28 @@
     color: white !important;
     font-size: 14px !important;
   }
-}
 
-@media (min-width: 1536px) {
-
-  /* Slider 2 next button position and color */
-  .slider2 .owl-nav .owl-next {
-    background-color: white !important;
-    right: 64% !important;
-    border: solid 1px #e4e4e5 !important;
+  .slider2 .owl-nav .owl-next:hover svg g {
+    fill: white !important;
   }
 
+  .slider3 .owl-nav .owl-next:hover svg g {
+    fill: #2bb7e5 !important;
+  }
+
+  .slider3 .owl-nav .owl-prev:hover svg g {
+    fill: white !important;
+  }
+
+  .slider3 .owl-nav .owl-next:hover {
+    background-color: white !important;
+  }
+
+  .slider3 .owl-nav .owl-prev:hover {
+    background-color: #1ab7ea !important;
+  }
 }
+
 
 /* Slider dot on hover */
 
@@ -393,10 +403,21 @@
     right: -6% !important;
   }
 
+  .slider2 .owl-nav .owl-next:hover {
+    background-color: white !important;
+    border: solid 1px #e4e4e5 !important;
+  }
+
+  .slider3 .owl-nav .owl-next:hover {
+    background-color: #2bb7e5 !important;
+    border: solid 1px #e4e4e5 !important;
+  }
+
   .slider3 .owl-nav .owl-next {
     background-color: white !important;
     right: -5% !important;
     top: 42% !important;
+    border: solid 1px #e4e4e5 !important;
   }
 
   .owl-nav .owl-prev {
@@ -406,9 +427,24 @@
   .owl-nav .owl-prev img {
     display: none;
   }
+
+  .slider2 .owl-nav .owl-next:hover svg g {
+    fill: #2bb7e5 !important;
+  }
+
+  .slider3 .owl-nav .owl-next:hover svg g {
+    fill: white !important;
+  }
 }
 
 @media screen and (min-width: 1536px) {
+
+  /* Slider 2 next button position and color */
+  .slider2 .owl-nav .owl-next {
+    background-color: white !important;
+    right: 64% !important;
+  }
+
   .questionUnderline {
     position: relative;
     text-decoration: none;
@@ -442,11 +478,13 @@
   margin: 0px !important;
   position: absolute !important;
   top: 42% !important;
+  border: solid 1px #e4e4e5 !important;
 }
 
 .owl-nav .owl-next:hover {
   transition: all 0.5s ease-in-out;
   background-color: #1ab7ea !important;
+  border: solid 1px #e4e4e5 !important;
 }
 
 .owl-nav .owl-prev:hover {
@@ -460,10 +498,7 @@
   width: 87px !important;
   margin: 0px !important;
   position: absolute !important;
-}
-
-.slider3 .owl-nav .owl-next:hover {
-  background-color: #1ab7ea !important;
+  border: solid 1px #e4e4e5 !important;
 }
 
 /* Animations*/
