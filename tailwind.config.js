@@ -274,6 +274,7 @@ module.exports = {
                 '276px': '276px',
                 '277px': '277px',
                 '280px': '280px',
+                '282px': '282px',
                 '285px': '285px',
                 '286px': '286px',
                 '287px': '287px',
@@ -723,6 +724,9 @@ module.exports = {
             },
             borderRadius: { //custom borderRadius
                 '20px': '20px',
+            },
+            rotate: {
+                '9deg': '-9deg'
             }
         },
     },
