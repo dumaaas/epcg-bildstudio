@@ -539,8 +539,11 @@
   0%{
     transform: translateY(0%);
   }
-  50%{
+  25%{
     transform: translateY(-150%);
+  }
+  50%{
+    transform: translateY(0%);
   }
    100%{
     transform: translateY(0%);
@@ -551,8 +554,11 @@
   0%{
     transform: translateY(0%);
   }
-  50%{
+  25%{
     transform: translateY(-150%);
+  }
+  50%{
+    transform: translateY(0%);
   }
    100%{
     transform: translateY(0%);
@@ -564,6 +570,9 @@
     transform: translateY(0%);
   }
   50%{
+    transform: translateY(0%);
+  }
+  75%{
     transform: translateY(32%);
   }
   100%{
@@ -575,7 +584,10 @@
   0%{
     transform: translateY(0%);
   }
-  50%{
+   50%{
+    transform: translateY(0%);
+  }
+  75%{
     transform: translateY(32%);
   }
   100%{
@@ -608,10 +620,25 @@
   0% {
     transform: translateY(0%);
   }
-  30% {
+  25% {
     transform: translateY(-100%);
   }
-  60% {
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes jumpUp {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
     transform: translateY(0%);
   }
   100% {
@@ -626,8 +653,23 @@
   50% {
     transform: scale(1, 1);
   }
-  90% {
-    transform: scale(0, 0);
+  80% {
+    transform: scale(0.4, 0.4);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes squeeze {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  80% {
+    transform: scale(0.4, 0.4);
   }
   100% {
     transform: scale(1, 1);
@@ -894,24 +936,23 @@
 
 .icon-animate {
   animation-duration: 0.5s;
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 
 .icon-second-animate {
   animation: 1s linear;
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
   transform-origin: 24px 20px;
 }
 
 .icon-third-animate {
   animation: 0.5s linear;
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 
 .icon-first:hover .icon-first-light {
   -webkit-animation-name: bounceSide;
   animation-name: bounceSide;
-  animation-delay: 1s;
 }
 
 .icon-first:hover .icon-first-dark {
