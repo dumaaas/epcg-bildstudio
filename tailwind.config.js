@@ -1,5 +1,5 @@
 module.exports = {
-    purge: { //enabling purge for cleaning css code
+    purge: { //enabling purge for cleaning css codee
         enabled: true,
         content: [
             './public/**/*.html',
