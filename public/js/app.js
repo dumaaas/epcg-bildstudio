@@ -1,11 +1,73 @@
+//initalize variables for slider 1 animations
+var effectsHeading = 'animated fadeIn slider-delay-1_5s slider-duration-1_7s';
+var effectsShape = 'animated slideInRight slider-delay-1s';
+var effectsImg = 'animated slideInRight slider-delay-1_2s';
+var effectsFlekaParagraf = 'animated fadeIn slider-delay-2s';
+var effectsImgWomanSlide3 = 'animated slideInRight slider-delay-1_4s';
+var effectsFadeOut = 'animated fadeOut';
+
+var effectsEnd =
+'animationEnd oAnimationEnd mozAnimationEnd webkitAnimationEnd';
+
+function itemAnimationOut(i) {
+    $('.itemSelfHeading'+i)
+    .addClass(effectsFadeOut);
+    $('.itemSelfShape'+i)
+    .addClass(effectsFadeOut);
+    $('.itemSelfImg'+i)
+    .addClass(effectsFadeOut);
+    $('.itemSelfFleka'+i)
+    .addClass(effectsFadeOut);
+    $('.itemSelfParagraf'+i)
+    .addClass(effectsFadeOut);
+}
+
+//function animationIn
+function itemAnimation(i) {
+    $('.itemSelfHeading'+i)
+    .addClass(effectsHeading)
+    .one(effectsEnd, function () {
+        $('.itemSelfHeading'+i).removeClass(effectsHeading);
+    });
+    $('.itemSelfShape'+i)
+    .addClass(effectsShape)
+    .one(effectsEnd, function () {
+        $('.itemSelfShape'+i).removeClass(effectsShape);
+    });
+    $('.itemSelfImg'+i)
+    .addClass(effectsImg)
+    .one(effectsEnd, function () {
+        $('.itemSelfImg'+i).removeClass(effectsImg);
+    });
+    $('.itemSelfFleka'+i)
+    .addClass(effectsFlekaParagraf)
+    .one(effectsEnd, function () {
+        $('.itemSelfFleka'+i).removeClass(effectsFlekaParagraf);
+    });
+    $('.itemSelfParagraf'+i)
+    .addClass(effectsFlekaParagraf)
+    .one(effectsEnd, function () {
+        $('.itemSelfParagraf'+i).removeClass(effectsFlekaParagraf);
+    });
+    if(i==3) {
+        $('.itemSelfImgWomanSlide'+i)
+        .addClass(effectsImgWomanSlide3)
+        .one(effectsEnd, function () {
+            $('.itemSelfImgWomanSlide'+i).removeClass(effectsImgWomanSlide3);
+        });  
+    }
+}
+
 //initializing new Wow object on load of window
 $(window).on('load', function () {
     new WOW().init();
+
+    //animation of first item on load
+    itemAnimation(1)
 });
 
 //document ready
 $(document).ready(function () {
-
 
     //to avoid exepction on Lighthouse report for passive listeners
     jQuery.event.special.touchstart = {
@@ -111,12 +173,13 @@ $(document).ready(function () {
         loop: true,
         lazyLoad: true,
         items: 1,
-        smartSpeed: 1200,
+        smartSpeed: 2500,
         autoplayHoverPause: true,
         margin: 10,
         dots: true,
         touchDrag: false,
         mouseDrag: false,
+        animateOut: 'fadeOut',
         responsive: {
             // 0: {
             //     autoHeight: true,
@@ -154,71 +217,26 @@ $(document).ready(function () {
 
 
     // Animations - slider 1
-    var effectsHeading = 'animated fadeIn slider-delay-1_5s slider-duration-1_7s';
-    var effectsShape = 'animated fadeInRight slider-delay-1s';
-    var effectsImg = 'animated fadeInRight slider-delay-1_2s';
-    var effectsImgWomanSlide3 = 'animated fadeInRight slider-delay-1_4s';
-    var effectsFlekaParagraf = 'animated fadeInRight slider-delay-2s';
-    
-    var effectsEnd =
-    'animationEnd oAnimationEnd mozAnimationEnd webkitAnimationEnd';
     var owl = $('.slider1');
-    var owl1 = $('.slider1');
-    var owl2 = $('.slider1');
-    var owl3 = $('.slider1');
-    var owl4 = $('.slider1');
-    var owl5 = $('.slider1');
+
+    // owl.on('translated.owl.carousel', function(event) {
+    //     if(event.item.index == 2) {
+    //         itemAnimationOut(1);
+    //     }
+    // });
 
     // Listen to owl events:
     owl.on('changed.owl.carousel', function (event) {
-        $('.itemSelfHeading')
-        .addClass(effectsHeading)
-        .one(effectsEnd, function () {
-            $('.itemSelfHeading').removeClass(effectsHeading);
-        });
-        
+        console.log(event.item.index)
+        if(event.item.index == 2) {
+            console.log(event.item);
+            itemAnimation(1);
+        } else if(event.item.index == 3) {
+            itemAnimation(2);
+        } else {
+            itemAnimation(3);
+        }
     });
-
-    owl1.on('changed.owl.carousel', function (event) {
-        $('.itemSelfShape')
-        .addClass(effectsShape)
-        .one(effectsEnd, function () {
-            $('.itemSelfShape').removeClass(effectsShape);
-        });
-    });
-
-    owl2.on('changed.owl.carousel', function (event) {
-        $('.itemSelfImg')
-        .addClass(effectsImg)
-        .one(effectsEnd, function () {
-            $('.itemSelfImg').removeClass(effectsImg);
-        });
-    });
-
-    owl3.on('changed.owl.carousel', function (event) {
-        $('.itemSelfImgWomanSlide3')
-        .addClass(effectsImgWomanSlide3)
-        .one(effectsEnd, function () {
-            $('.itemSelfImgWomanSlide3').removeClass(effectsImgWomanSlide3);
-        });
-    });
-
-    owl4.on('changed.owl.carousel', function (event) {
-        $('.itemSelfFleka')
-        .addClass(effectsFlekaParagraf)
-        .one(effectsEnd, function () {
-            $('.itemSelfFleka').removeClass(effectsFlekaParagraf);
-        });
-    });
-
-    owl5.on('changed.owl.carousel', function (event) {
-        $('.itemSelfParagraf')
-        .addClass(effectsFlekaParagraf)
-        .one(effectsEnd, function () {
-            $('.itemSelfParagraf').removeClass(effectsFlekaParagraf);
-        });
-    });
-
 
     //slider2
     $('.slider2').owlCarousel({
@@ -301,7 +319,4 @@ $(document).ready(function () {
             }
         }
     });
-
-
-
 });
