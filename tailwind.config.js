@@ -1,14 +1,14 @@
 module.exports = {
     purge: { //enabling purge for cleaning css code
-        // enabled: true,
-        // content: [
-        //     './public/**/*.html',
-        //     './public/**/*.js',
-        // ],
-        // options: {
-        //     keyframes: true,
-        //     fontFace: true,
-        // }
+        enabled: true,
+        content: [
+            './public/**/*.html',
+            './public/**/*.js',
+        ],
+        options: {
+            keyframes: true,
+            fontFace: true,
+        }
     },
     darkMode: 'media', // or 'media' or 'class'
     theme: {
@@ -712,6 +712,7 @@ module.exports = {
             },
             animation: { //animation for header
                 'fadeIn': 'fadeIn 1s ease-in both',
+                'rotateHead': 'rotateHead 1s ease-in',
             },
             keyframes: {
                 wiggle: {
@@ -723,7 +724,53 @@ module.exports = {
                         opacity: 1,
                         transform: 'translateY(0)'
                     },
-                }
+                },
+                rotateHead: {
+                    '0%': {
+                      transform: 'translateX(0%)'
+                    },
+                    '10%': {
+                      transform: 'translateX(86%) skewX(2deg)'
+                    },
+                    '20%': {
+                      transform: 'translateX(172%) skewX(5deg)'
+                    },
+                    '30%': {
+                      transform: 'translateX(258%) skewX(8deg)'
+                    },
+                    '40%': {
+                      transform: 'translateX(344%) skewX(11deg)'
+                    },
+                    '50%': {
+                      transform: 'translateX(430%)',
+                      opacity: 0
+                    },
+                  
+                    '51%': {
+                      transform: 'translateX(-550%)'
+                    },
+                  
+                    '60%': {
+                      transform: 'translateX(-440%) skewX(11deg)'
+                    },
+                  
+                    '70%':{
+                      transform: 'translateX(-330%) skewX(8deg)'
+                    },
+                  
+                    '80%': {
+                      transform: 'translateX(-220%) skewX(5deg)'
+                    },
+                  
+                    '90%': {
+                      transform: 'translateX(-110%) skewX(2deg)'
+                    },
+                    '100%': {
+                      opacity: 1,
+                      transform: 'translateX(0%)',
+                      transform: 'rotate(0deg)'
+                    }
+                  }
             },
             borderRadius: { //custom borderRadius
                 '20px': '20px',
