@@ -152,6 +152,74 @@ $(document).ready(function () {
     //         });
     // });
 
+
+    // Animations - slider 1
+    var effectsHeading = 'animated fadeIn slider-delay-1_5s slider-duration-1_7s';
+    var effectsShape = 'animated fadeInRight slider-delay-1s';
+    var effectsImg = 'animated fadeInRight slider-delay-1_2s';
+    var effectsImgWomanSlide3 = 'animated fadeInRight slider-delay-1_4s';
+    var effectsFlekaParagraf = 'animated fadeInRight slider-delay-2s';
+    
+    var effectsEnd =
+    'animationEnd oAnimationEnd mozAnimationEnd webkitAnimationEnd';
+    var owl = $('.slider1');
+    var owl1 = $('.slider1');
+    var owl2 = $('.slider1');
+    var owl3 = $('.slider1');
+    var owl4 = $('.slider1');
+    var owl5 = $('.slider1');
+
+    // Listen to owl events:
+    owl.on('changed.owl.carousel', function (event) {
+        $('.itemSelfHeading')
+        .addClass(effectsHeading)
+        .one(effectsEnd, function () {
+            $('.itemSelfHeading').removeClass(effectsHeading);
+        });
+        
+    });
+
+    owl1.on('changed.owl.carousel', function (event) {
+        $('.itemSelfShape')
+        .addClass(effectsShape)
+        .one(effectsEnd, function () {
+            $('.itemSelfShape').removeClass(effectsShape);
+        });
+    });
+
+    owl2.on('changed.owl.carousel', function (event) {
+        $('.itemSelfImg')
+        .addClass(effectsImg)
+        .one(effectsEnd, function () {
+            $('.itemSelfImg').removeClass(effectsImg);
+        });
+    });
+
+    owl3.on('changed.owl.carousel', function (event) {
+        $('.itemSelfImgWomanSlide3')
+        .addClass(effectsImgWomanSlide3)
+        .one(effectsEnd, function () {
+            $('.itemSelfImgWomanSlide3').removeClass(effectsImgWomanSlide3);
+        });
+    });
+
+    owl4.on('changed.owl.carousel', function (event) {
+        $('.itemSelfFleka')
+        .addClass(effectsFlekaParagraf)
+        .one(effectsEnd, function () {
+            $('.itemSelfFleka').removeClass(effectsFlekaParagraf);
+        });
+    });
+
+    owl5.on('changed.owl.carousel', function (event) {
+        $('.itemSelfParagraf')
+        .addClass(effectsFlekaParagraf)
+        .one(effectsEnd, function () {
+            $('.itemSelfParagraf').removeClass(effectsFlekaParagraf);
+        });
+    });
+
+
     //slider2
     $('.slider2').owlCarousel({
         nav: true,
