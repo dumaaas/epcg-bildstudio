@@ -4,26 +4,59 @@ var effectsShape = 'animated slideInRight slider-delay-1s';
 var effectsImg = 'animated slideInRight slider-delay-1_2s';
 var effectsFlekaParagraf = 'animated fadeIn slider-delay-2s';
 var effectsImgWomanSlide3 = 'animated slideInRight slider-delay-1_4s';
-var effectsFadeOut = 'animated fadeOut';
+var effectsHeadingOut = 'animated fadeOut';
+var effectsShapeOut = 'animated slideOutRight ';
+var effectsImgOut = 'animated slideOutRight';
+var effectsFlekaParagrafOut = 'animated fadeOut'
+var effectsImgWomanSlideOut3 = 'animated slideOutRight';
 
 var effectsEnd =
 'animationEnd oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
 function itemAnimationOut(i) {
+    if(i==4 || i==1) {
+        i=4;
+    }
+    console.log("STA SE DESAVA ODJE");
     $('.itemSelfHeading'+i)
-    .addClass(effectsFadeOut);
+    .addClass(effectsHeadingOut)
+    .one(effectsEnd, function () {
+        $('.itemSelfHeading'+i).removeClass(effectsHeadingOut);
+    });
     $('.itemSelfShape'+i)
-    .addClass(effectsFadeOut);
+    .addClass(effectsShapeOut)
+    .one(effectsEnd, function () {
+        $('.itemSelfShape'+i).removeClass(effectsShapeOut);
+    });
     $('.itemSelfImg'+i)
-    .addClass(effectsFadeOut);
+    .addClass(effectsImgOut)
+    .one(effectsEnd, function () {
+        $('.itemSelfImg'+i).removeClass(effectsImgOut);
+    });
     $('.itemSelfFleka'+i)
-    .addClass(effectsFadeOut);
+    .addClass(effectsFlekaParagrafOut)
+    .one(effectsEnd, function () {
+        $('.itemSelfFleka'+i).removeClass(effectsFlekaParagrafOut);
+    });
     $('.itemSelfParagraf'+i)
-    .addClass(effectsFadeOut);
+    .addClass(effectsFlekaParagrafOut)
+    .one(effectsEnd, function () {
+        $('.itemSelfParagraf'+i).removeClass(effectsFlekaParagrafOut);
+    });
+    if(i==4) {
+        $('.itemSelfImgWomanSlide'+i)
+        .addClass(effectsImgWomanSlideOut3)
+        .one(effectsEnd, function () {
+            $('.itemSelfImgWomanSlide'+i).removeClass(effectsImgWomanSlideOut3);
+        });  
+    }
 }
 
 //function animationIn
 function itemAnimation(i) {
+    if(i==4 || i==1) {
+        i=4;
+    }
     $('.itemSelfHeading'+i)
     .addClass(effectsHeading)
     .one(effectsEnd, function () {
@@ -49,7 +82,7 @@ function itemAnimation(i) {
     .one(effectsEnd, function () {
         $('.itemSelfParagraf'+i).removeClass(effectsFlekaParagraf);
     });
-    if(i==3) {
+    if(i==4) {
         $('.itemSelfImgWomanSlide'+i)
         .addClass(effectsImgWomanSlide3)
         .one(effectsEnd, function () {
@@ -63,7 +96,7 @@ $(window).on('load', function () {
     new WOW().init();
 
     //animation of first item on load
-    itemAnimation(1)
+    itemAnimation(2)
 });
 
 //document ready
@@ -173,13 +206,15 @@ $(document).ready(function () {
         loop: true,
         lazyLoad: true,
         items: 1,
-        smartSpeed: 2500,
+        smartSpeed: 1400,
         autoplayHoverPause: true,
         margin: 10,
         dots: true,
         touchDrag: false,
         mouseDrag: false,
+        transitionStyle : false,
         animateOut: 'fadeOut',
+
         responsive: {
             // 0: {
             //     autoHeight: true,
@@ -227,16 +262,18 @@ $(document).ready(function () {
 
     // Listen to owl events:
     owl.on('changed.owl.carousel', function (event) {
-        console.log(event.item.index)
-        if(event.item.index == 2) {
-            console.log(event.item);
-            itemAnimation(1);
-        } else if(event.item.index == 3) {
-            itemAnimation(2);
-        } else {
-            itemAnimation(3);
-        }
+        var lastActiveIndex = $('.owl-item.active').index();
+        console.log(lastActiveIndex)
+        console.log(event.item.index);
+        itemAnimationOut(lastActiveIndex);
+
+        itemAnimation(event.item.index);
+
     });
+    // owl.on('change.owl.carousel', function(event) {
+    //     var lastActiveIndex = $('.owl-item.active').index();
+    //     itemAnimationOut(lastActiveIndex);
+    // });
 
     //slider2
     $('.slider2').owlCarousel({
