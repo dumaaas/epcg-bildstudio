@@ -940,13 +940,8 @@
 }
 
 .icon-second-animate {
-<<<<<<< HEAD
-  animation: 1s linear;
-  animation-delay: 0.3s;
-=======
   animation: 0.5s linear;
   animation-delay: 0.5s;
->>>>>>> 58e2089f3abc722495898c74a0215e157a0d4be4
   transform-origin: 24px 20px;
 }
 
