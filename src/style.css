@@ -898,7 +898,7 @@
 }
 
 .icon-second-animate {
-  animation: 1s linear;
+  animation: 0.5s linear;
   animation-delay: 0.5s;
   transform-origin: 24px 20px;
 }
