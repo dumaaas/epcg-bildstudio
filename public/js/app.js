@@ -4,11 +4,11 @@ var effectsShape = 'animated slideInRight slider-delay-1s';
 var effectsImg = 'animated slideInRight slider-delay-1_2s';
 var effectsFlekaParagraf = 'animated fadeIn slider-delay-2s';
 var effectsImgWomanSlide3 = 'animated slideInRight slider-delay-1_4s';
-var effectsHeadingOut = 'animated fadeOut';
-var effectsShapeOut = 'animated slideOutRight ';
-var effectsImgOut = 'animated slideOutRight';
-var effectsFlekaParagrafOut = 'animated fadeOut'
-var effectsImgWomanSlideOut3 = 'animated slideOutRight';
+var effectsHeadingOut = 'owl-animated-out animated fadeOut';
+var effectsShapeOut = 'owl-animated-out animated slideOutRight ';
+var effectsImgOut = 'owl-animated-out animated slideOutRight';
+var effectsFlekaParagrafOut = 'owl-animated-out animated fadeOut'
+var effectsImgWomanSlideOut3 = 'owl-animated-out animated slideOutRight';
 
 var effectsEnd =
 'animationEnd oAnimationEnd mozAnimationEnd webkitAnimationEnd';
