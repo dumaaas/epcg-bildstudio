@@ -391,6 +391,7 @@
   .slider3 .owl-dots {
     display: flex;
     justify-content: center;
+    margin-top: -15px;
   }
 
   /* Slider dots color and border */
@@ -400,12 +401,18 @@
   }
 
   .slider2 .owl-nav .owl-next {
-    right: -6% !important;
+    border-radius: 9999px !important;
+    height: 77px !important;
+    width: 77px !important;
+    margin: 0px !important;
+    position: absolute !important;
+    top: 42% !important;
+    right: -9% !important;
+    border: solid 1px #e4e4e5 !important;
   }
 
   .slider2 .owl-nav .owl-next:hover {
     background-color: white !important;
-    border: solid 1px #e4e4e5 !important;
   }
 
   .slider3 .owl-nav .owl-next:hover {
@@ -415,7 +422,12 @@
 
   .slider3 .owl-nav .owl-next {
     background-color: white !important;
-    right: -5% !important;
+    border-radius: 9999px !important;
+    height: 77px !important;
+    width: 77px !important;
+    margin: 0px !important;
+    position: absolute !important;
+    right: -9% !important;
     top: 42% !important;
     border: solid 1px #e4e4e5 !important;
   }
@@ -492,15 +504,6 @@
   background-color: #1ab7ea !important;
 }
 
-.slider3 .owl-nav .owl-next {
-  border-radius: 9999px !important;
-  height: 87px !important;
-  width: 87px !important;
-  margin: 0px !important;
-  position: absolute !important;
-  border: solid 1px #e4e4e5 !important;
-}
-
 /* Animations*/
 
 /* Animations - slider 1 */
@@ -551,7 +554,7 @@
 }
 
 .icon-first:hover .icon-first-dark {
-   -webkit-animation-name: movesUp;
+  -webkit-animation-name: movesUp;
   animation-name: movesUp;
 }
 
@@ -564,6 +567,7 @@
   -webkit-animation-name: scalesDown;
   animation-name: scalesDown;
 }
+
 .icon-second:hover .icon-second-dark {
   -webkit-animation-name: movesLeftRight;
   animation-name: movesLeftRight;
@@ -729,6 +733,7 @@
     .change .bar3 {
       @apply transform scale-x-110 rotate-45 -translate-x-7px -translate-y-6px mb-9px;
     }
+
     /* End Hamburger menu */
   }
 }
