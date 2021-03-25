@@ -140,6 +140,7 @@
 
 @media (min-width: 1280px) {
 
+
   /* Position for slider 1 dots */
   .slider1 .owl-dots {
     display: flex;
@@ -377,6 +378,10 @@
   .owl-theme .owl-nav.disabled+.owl-dots {
     margin-top: 0 !important;
     padding-top: 10px;
+  }
+
+  .owl-dots {
+    height: 53px !important;
   }
 
   /* Position for slider 1 dots */
