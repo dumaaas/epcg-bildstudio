@@ -396,7 +396,7 @@
   .slider3 .owl-dots {
     display: flex;
     justify-content: center;
-    margin-top: -15px;
+    margin-top: -25px;
   }
 
   /* Slider dots color and border */
@@ -407,12 +407,12 @@
 
   .slider2 .owl-nav .owl-next {
     border-radius: 9999px !important;
-    height: 77px !important;
-    width: 77px !important;
+    height: 70px !important;
+    width: 70px !important;
     margin: 0px !important;
     position: absolute !important;
     top: 42% !important;
-    right: -9% !important;
+    right: -6% !important;
     border: solid 1px #e4e4e5 !important;
   }
 
@@ -428,11 +428,11 @@
   .slider3 .owl-nav .owl-next {
     background-color: white !important;
     border-radius: 9999px !important;
-    height: 77px !important;
-    width: 77px !important;
+    height: 70px !important;
+    width: 70px !important;
     margin: 0px !important;
     position: absolute !important;
-    right: -9% !important;
+    right: -5% !important;
     top: 42% !important;
     border: solid 1px #e4e4e5 !important;
   }
@@ -451,6 +451,16 @@
 
   .slider3 .owl-nav .owl-next:hover svg g {
     fill: white !important;
+  }
+
+  .slider2 .owl-nav .owl-next svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .slider3 .owl-nav .owl-next svg {
+    width: 32px !important;
+    height: 32px !important;
   }
 }
 
