@@ -719,7 +719,7 @@
     }
 
     .change .bar1 {
-      @apply transform -rotate-45 -translate-x-8px w-30px translate-y-12px;
+      @apply transform -rotate-45 -translate-x-8px w-30px translate-y-12px scale-x-110;
     }
 
     .change .bar2 {
@@ -727,7 +727,7 @@
     }
 
     .change .bar3 {
-      @apply transform rotate-45 -translate-x-7px -translate-y-6px;
+      @apply transform rotate-45 -translate-x-7px -translate-y-6px mb-9px scale-x-110;
     }
     /* End Hamburger menu */
   }
