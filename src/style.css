@@ -23,7 +23,7 @@
   background-color: #1ab7ea;
   height: 3px;
   position: absolute;
-  bottom: -7px;
+  bottom: -6px;
   left: 0px;
   width: 0%;
   content: "";
@@ -719,7 +719,7 @@
     }
 
     .change .bar1 {
-      @apply transform -rotate-45 -translate-x-8px w-30px translate-y-12px scale-x-110;
+      @apply transform scale-x-110 -rotate-45 -translate-x-8px w-30px translate-y-12px;
     }
 
     .change .bar2 {
@@ -727,7 +727,7 @@
     }
 
     .change .bar3 {
-      @apply transform rotate-45 -translate-x-7px -translate-y-6px mb-9px scale-x-110;
+      @apply transform scale-x-110 rotate-45 -translate-x-7px -translate-y-6px mb-9px;
     }
     /* End Hamburger menu */
   }
