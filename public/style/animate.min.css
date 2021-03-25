@@ -330,7 +330,7 @@
   animation-name: slideInRight-s3;
 }
 
-@-webkit-keyframes slideInRight-3 {
+@-webkit-keyframes slideInRight-s3 {
   0% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
@@ -343,7 +343,7 @@
   }
 }
 
-@keyframes slideInRight-3 {
+@keyframes slideInRight-s3 {
   0% {
     opacity: 0;
     -webkit-transform: translateX(2000px);
