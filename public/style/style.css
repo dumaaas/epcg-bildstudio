@@ -552,8 +552,8 @@
 }
 
 .icon-animate {
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
