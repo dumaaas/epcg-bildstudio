@@ -1,14 +1,14 @@
 module.exports = {
     purge: { //enabling purge for cleaning css codee
-        // enabled: true,
-        // content: [
-        //     './public/**/*.html',
-        //     './public/**/*.js',
-        // ],
-        // options: {
-        //     keyframes: true,
-        //     fontFace: true,
-        // }
+        enabled: true,
+        content: [
+            './public/**/*.html',
+            './public/**/*.js',
+        ],
+        options: {
+            keyframes: true,
+            fontFace: true,
+        }
     },
     darkMode: 'media', // or 'media' or 'class'
     theme: {
