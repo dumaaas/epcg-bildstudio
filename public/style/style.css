@@ -289,6 +289,16 @@
   width: auto;
 }
 
+.main-slider .owl-carousel .owl-item {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-slider .owl-carousel .owl-item.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Slider active button */
 
 .owl-dots .owl-dot.active button {
