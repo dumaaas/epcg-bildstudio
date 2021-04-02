@@ -140,6 +140,21 @@
 
 /* Rules that applies for slider for  large screens */
 
+@media (min-width: 1280px) and (max-width: 1535px) {
+  /* Show underline on hover */
+
+  .questionUnderline:hover{
+    display: inline;
+    box-shadow: inset 0 -2px #2f56b0;
+    text-decoration: none;
+  }
+
+  .questionUnderline:before{
+    content: "";
+    display: block;
+  }
+}
+
 @media (min-width: 1280px) {
   /* Position for slider 1 dots */
 
@@ -3925,6 +3940,10 @@ button:focus {
 
   .xl\:w-594px {
     width: 594px;
+  }
+
+  .xl\:w-650px {
+    width: 650px;
   }
 
   .xl\:w-820px {
