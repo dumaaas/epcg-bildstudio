@@ -170,15 +170,6 @@
     opacity: 0.4;
   }
 
-  /* Show underline on hover */
-  .slider2 .slider-two__item:hover h3 {
-    text-decoration: underline;
-  }
-
-  /* Dont show underline for non active slides */
-  .slider2 .owl-item.active h3 {
-    text-decoration: none !important;
-  }
 
   /* Slider 3 dots position */
   .slider3 .owl-dots {
@@ -480,6 +471,23 @@
   .slider2 .owl-nav .owl-next {
     background-color: white !important;
     right: 64% !important;
+  }
+
+  /* Slider 2 - Show underline on hover */
+  .slider2 .slider-two__item:hover h3 {
+    display: inline;
+    box-shadow: inset 0 -2px black;
+    text-decoration: none;
+  }
+
+  .slider2 .slider-two__item h3:before {
+    content: "";
+    display: block;
+  }
+
+  /* Slider 2 - Dont show underline for non active slides */
+  .slider2 .owl-item.active h3 {
+    box-shadow: none;
   }
 
   .questionUnderline {

@@ -174,18 +174,6 @@
     opacity: 0.4;
   }
 
-  /* Show underline on hover */
-
-  .slider2 .slider-two__item:hover h3 {
-    text-decoration: underline;
-  }
-
-  /* Dont show underline for non active slides */
-
-  .slider2 .owl-item.active h3 {
-    text-decoration: none !important;
-  }
-
   /* Slider 3 dots position */
 
   .slider3 .owl-dots {
@@ -495,6 +483,25 @@
   .slider2 .owl-nav .owl-next {
     background-color: white !important;
     right: 64% !important;
+  }
+
+  /* Slider 2 - Show underline on hover */
+
+  .slider2 .slider-two__item:hover h3 {
+    display: inline;
+    box-shadow: inset 0 -2px black;
+    text-decoration: none;
+  }
+
+  .slider2 .slider-two__item h3:before {
+    content: "";
+    display: block;
+  }
+
+  /* Slider 2 - Dont show underline for non active slides */
+
+  .slider2 .owl-item.active h3 {
+    box-shadow: none;
   }
 
   .questionUnderline {
@@ -4016,6 +4023,10 @@ button:focus {
     height: 530px;
   }
 
+  .\32xl\:h-589px {
+    height: 589px;
+  }
+
   .\32xl\:h-775px {
     height: 775px;
   }
@@ -4090,6 +4101,10 @@ button:focus {
     margin-bottom: 102px;
   }
 
+  .\32xl\:mt-0 {
+    margin-top: 0px;
+  }
+
   .\32xl\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -4100,6 +4115,10 @@ button:focus {
 
   .\32xl\:mt-9px {
     margin-top: 9px;
+  }
+
+  .\32xl\:mb-10px {
+    margin-bottom: 10px;
   }
 
   .\32xl\:mt-23px {
@@ -4443,10 +4462,6 @@ button:focus {
 
   .\32xl\:w-321px {
     width: 321px;
-  }
-
-  .\32xl\:w-338px {
-    width: 338px;
   }
 
   .\32xl\:w-380px {
