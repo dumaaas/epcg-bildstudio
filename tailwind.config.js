@@ -1,14 +1,14 @@
 module.exports = {
     purge: { //enabling purge for cleaning css codee
-        enabled: true,
-        content: [
-            './public/**/*.html',
-            './public/**/*.js',
-        ],
-        options: {
-            keyframes: true,
-            fontFace: true,
-        }
+        // enabled: true,
+        // content: [
+        //     './public/**/*.html',
+        //     './public/**/*.js',
+        // ],
+        // options: {
+        //     keyframes: true,
+        //     fontFace: true,
+        // }
     },
     darkMode: 'media', // or 'media' or 'class'
     theme: {
@@ -298,6 +298,7 @@ module.exports = {
                 '321px': '321px',
                 '324px': '324px',
                 '329px': '329px',
+                '330px': '330px',
                 '335px': '335px',
                 '338px': '338px',
                 '343px': '343px',
@@ -315,6 +316,7 @@ module.exports = {
                 '390px': '390px',
                 '395px': '395px',
                 '400px': '400px',
+                '405px': '405px',
                 '407px': '407px',
                 '410px': '410px',
                 '415px': '415px',
@@ -675,6 +677,7 @@ module.exports = {
                 '379px': '379px',
                 '387px': '387px',
                 '400px': '400px',
+                '422px': '422px',
                 '434px': '434px',
                 '452px': '452px',
                 '460px': '460px',
