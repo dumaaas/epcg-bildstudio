@@ -137,6 +137,18 @@
 /* Rules that applies for slider for  large screens */
 
 @media (min-width: 1280px) and (max-width: 1535px) {
+
+  .slider2 .slider-two__item:hover h3 {
+    display: inline;
+    box-shadow: inset 0 -2px black;
+    text-decoration: none;
+  }
+
+  .slider2 .slider-two__item h3:before {
+    content: '';
+    display: block;
+  }
+
   /* Show underline on hover */
   .questionUnderline:hover {
     display: inline;
