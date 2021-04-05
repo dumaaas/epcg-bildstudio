@@ -1,15 +1,15 @@
 module.exports = {
   purge: {
     //enabling purge for cleaning css codee
-    // enabled: true,
-    // content: [
-    //     './public/**/*.html',
-    //     './public/**/*.js',
-    // ],
-    // options: {
-    //     keyframes: true,
-    //     fontFace: true,
-    // }
+    enabled: true,
+    content: [
+        './public/**/*.html',
+        './public/**/*.js',
+    ],
+    options: {
+        keyframes: true,
+        fontFace: true,
+    }
   },
   darkMode: 'media', // or 'media' or 'class'
   theme: {
@@ -643,6 +643,7 @@ module.exports = {
         '59%': '59%',
         '60%': '60%',
         '62%': '62%',
+        '90%': '90%',
       },
       minWidth: {
         //custom minWidth
@@ -681,6 +682,7 @@ module.exports = {
         '250px': '250px',
         '262px': '262px',
         '271px': '271px',
+        '290px': '290px',
         '300px': '300px',
         '320px': '320px',
         '330px': '330px',
